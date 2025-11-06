@@ -51,7 +51,7 @@ header {
   background: radial-gradient(
     ellipse at 50% 38%,
     var(--bg-cream) 0%,
-    var(--bg-cream) 18%,
+    var(--bg-cream) 7%,
     var(--craft-paper-light) 55%,
     var(--craft-paper) 100%
   );
@@ -102,14 +102,19 @@ header {
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
   border-radius: 2px;
 }
 
 .byline {
   color: var(--text-grey);
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-style: italic;
   margin-top: 0.75rem;
   opacity: 0.85;
@@ -284,7 +289,11 @@ section {
 
 /* Hero section */
 .hero-section {
-  background: linear-gradient(135deg, var(--craft-paper) 0%, var(--craft-paper-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--craft-paper) 0%,
+    var(--craft-paper-light) 100%
+  );
   color: white;
   padding: 3rem 2rem;
   border-radius: 12px;
@@ -704,7 +713,12 @@ section {
   height: 3px;
   top: 0;
   left: 0;
-  background: linear-gradient(90deg, var(--accent-color), var(--craft-paper-light), var(--accent-color));
+  background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    var(--craft-paper-light),
+    var(--accent-color)
+  );
   opacity: 0.4;
 }
 
