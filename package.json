@@ -1,0 +1,20 @@
+{
+  "name": "raiz-de-luz-website",
+  "version": "0.0.1",
+  "description": "Website for Raiz de Luz - Shamanic Massage and Wellness",
+  "author": "Raiz de Luz",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint . && prettier --check . && stylelint '**/*.{css,scss}'",
+    "prettier": "prettier --write ."
+  },
+  "source": [
+    "./docs/index.html"
+  ],
+  "devDependencies": {
+    "eslint": "latest",
+    "prettier": "latest",
+    "stylelint": "latest",
+    "stylelint-config-standard": "latest"
+  }
+}

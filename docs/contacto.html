@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entre em contacto com a Raiz de Luz para marcar sessões ou esclarecer dúvidas."
+    />
+    <meta property="og:title" content="Contacto - Raiz de Luz" />
+    <meta
+      property="og:description"
+      content="Marque a sua sessão ou entre em contacto connosco"
+    />
+    <meta property="og:url" content="https://raizdeluz.pt/contacto.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Raiz de Luz" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contacto - Raiz de Luz</title>
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-content">
+        <div id="title">
+          <img
+            id="logo"
+            src="media/raiz-de-luz-logo.svg"
+            alt="Raiz de Luz Logo"
+          />
+          <div id="title-text">
+            <h1>Raiz de Luz</h1>
+            <div class="byline">
+              <span>Massagem Xamânica e Bem-Estar</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-image">
+          <img
+            src="media/header-image.jpg"
+            alt="Espaço de cura e bem-estar"
+          />
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h2>Entre em Contacto</h2>
+        <p>Estamos aqui para o apoiar na sua jornada de cura</p>
+      </section>
+
+      <div class="contact-container">
+        <!-- Contact Information -->
+        <section class="contact-info">
+          <h3>Informações de Contacto</h3>
+
+          <div class="contact-item">
+            <h4>Email</h4>
+            <p><a href="mailto:info@raizdeluz.pt">info@raizdeluz.pt</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h4>Telefone</h4>
+            <p><a href="tel:+351XXXXXXXXX">+351 XXX XXX XXX</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/351XXXXXXXXX">+351 XXX XXX XXX</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h4>Morada</h4>
+            <p>
+              [Rua/Avenida]<br />
+              [Número e Andar]<br />
+              [Código Postal] [Cidade]<br />
+              Portugal
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <h4>Horário</h4>
+            <p>
+              Segunda a Sexta: 10h00 - 19h00<br />
+              Sábado: 10h00 - 14h00<br />
+              Domingo: Encerrado
+            </p>
+            <p class="contact-note">
+              <em>Atendemos por marcação. Contacte-nos para agendar a sua sessão.</em>
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="https://instagram.com/raizdeluz" target="_blank">Instagram</a>
+              <a href="https://facebook.com/raizdeluz" target="_blank">Facebook</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+          <h3>Envie-nos uma Mensagem</h3>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Nome *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="service">Serviço de Interesse</label>
+              <select id="service" name="service">
+                <option value="">Selecione uma opção</option>
+                <option value="massagem-xamanica">Massagem Xamânica</option>
+                <option value="cura-energetica">Cura Energética</option>
+                <option value="limpeza-fumo">Limpeza com Fumo</option>
+                <option value="produtos">Produtos Naturais</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn-primary">Enviar Mensagem</button>
+            </div>
+
+            <p class="form-note">
+              * Campos obrigatórios<br />
+              Responderemos à sua mensagem no prazo de 24-48 horas.
+            </p>
+          </form>
+        </section>
+      </div>
+
+      <!-- Map Section (placeholder) -->
+      <section class="map-section">
+        <h3>Localização</h3>
+        <div class="map-container">
+          <!-- You can add an embedded Google Map here -->
+          <p class="map-placeholder">
+            [Mapa interactivo será inserido aqui com a localização do espaço]
+          </p>
+          <!-- Example Google Maps embed:
+          <iframe
+            src="https://www.google.com/maps/embed?pb=..."
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+          -->
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h3>Perguntas Frequentes</h3>
+
+        <div class="faq-item">
+          <h4>Como posso marcar uma sessão?</h4>
+          <p>
+            Pode marcar a sua sessão por telefone, WhatsApp, email ou através
+            do formulário acima. Responderemos rapidamente para confirmar a sua
+            marcação.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Qual é a política de cancelamento?</h4>
+          <p>
+            Pedimos que nos informe com pelo menos 24 horas de antecedência caso
+            precise cancelar ou remarcar a sua sessão.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Preciso de trazer alguma coisa?</h4>
+          <p>
+            Não precisa de trazer nada. Fornecemos tudo o necessário para a sua
+            sessão. Recomendamos apenas que venha com roupa confortável.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Aceitam pagamento por Multibanco/MB Way?</h4>
+          <p>
+            Sim, aceitamos pagamento em dinheiro, Multibanco, MB Way e
+            transferência bancária.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>As sessões são adequadas para todos?</h4>
+          <p>
+            As nossas terapias são seguras para a maioria das pessoas. No
+            entanto, se tiver alguma condição médica específica, por favor
+            informe-nos previamente para adaptarmos a sessão às suas
+            necessidades.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Raiz de Luz</h3>
+          <p>Massagem Xamânica e Bem-Estar</p>
+        </div>
+        <div class="footer-section">
+          <h3>Links Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>Email: info@raizdeluz.pt</p>
+          <p>Telefone: +351 XXX XXX XXX</p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Raiz de Luz. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/contact-form.js"></script>
+  </body>
+</html>
