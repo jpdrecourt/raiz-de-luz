@@ -49,7 +49,7 @@ header {
   position: relative;
   padding: 0;
   background: radial-gradient(
-    ellipse at 50% 38%,
+    ellipse at 50% 34%,
     var(--bg-cream) 0%,
     var(--bg-cream) 7%,
     var(--craft-paper-light) 55%,
@@ -64,7 +64,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 2rem 2.5rem;
+  padding: 1.5rem 2rem 2.5rem;
   text-align: center;
   border-bottom: 3px solid var(--accent-color);
 }
@@ -86,7 +86,7 @@ header {
 
 #title-text h1 {
   margin-bottom: 0.5rem;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: var(--text-grey);
   text-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
@@ -127,7 +127,7 @@ header {
 /* Responsive header adjustments */
 @media (width <= 768px) {
   #title {
-    padding: 2.5rem 1.5rem 2rem;
+    padding: 1.25rem 1.5rem 2rem;
   }
 
   #logo {
@@ -136,13 +136,17 @@ header {
   }
 
   #title-text h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
+  }
+
+  .byline {
+    font-size: 1.25rem;
   }
 }
 
 @media (width <= 500px) {
   #title {
-    padding: 2rem 1rem 1.5rem;
+    padding: 1rem 1rem 1.5rem;
   }
 
   #logo {
@@ -151,11 +155,11 @@ header {
   }
 
   #title-text h1 {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
   }
 
   .byline {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
 }
 
