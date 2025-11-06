@@ -6,7 +6,7 @@
 }
 
 :root {
-  --primary-color: #6b8e6f; /* Earthy green for wellness */
+  --primary-color: #b85c38; /* Deep terracotta/rust for depth */
   --secondary-color: #d4a574; /* Warm earth tone */
   --accent-color: #dda15e; /* Warm golden/amber accent - represents light */
   --craft-paper: #8b7355; /* Earthy brown - craft paper color */
@@ -15,7 +15,8 @@
   --fg-color: #333;
   --text-light: #666;
   --text-grey: #555; /* Greyscale for text on brown background */
-  --bg-light: #f9f9f9;
+  --bg-light: #ebf4eb; /* Very light green background */
+  --bg-cream: #f9f5f0; /* Light cream for logo area */
   --border-light: #eee;
 }
 
@@ -47,7 +48,12 @@ header {
 .header-content {
   position: relative;
   padding: 0;
-  background: linear-gradient(135deg, var(--craft-paper) 0%, var(--craft-paper-light) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    var(--bg-cream) 0%,
+    var(--craft-paper-light) 50%,
+    var(--craft-paper) 100%
+  );
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 }
 
@@ -57,22 +63,9 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 2.5rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--craft-paper) 0%, var(--craft-paper-light) 100%);
   border-bottom: 3px solid var(--accent-color);
-}
-
-/* Text above logo */
-#title::before {
-  content: 'Massagem Xamânica e Bem-Estar';
-  display: block;
-  font-size: 0.95rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-grey);
-  margin-bottom: 1.5rem;
-  font-weight: 500;
 }
 
 #logo {
@@ -128,12 +121,7 @@ header {
 /* Responsive header adjustments */
 @media (width <= 768px) {
   #title {
-    padding: 2.5rem 1.5rem;
-  }
-
-  #title::before {
-    font-size: 0.85rem;
-    margin-bottom: 1.25rem;
+    padding: 2.5rem 1.5rem 2rem;
   }
 
   #logo {
@@ -148,13 +136,7 @@ header {
 
 @media (width <= 500px) {
   #title {
-    padding: 2rem 1rem;
-  }
-
-  #title::before {
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
+    padding: 2rem 1rem 1.5rem;
   }
 
   #logo {
@@ -186,14 +168,14 @@ li {
 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--primary-color);
+  color: var(--craft-paper-dark);
 }
 
 h3 {
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: var(--craft-paper-dark);
 }
 
 h4 {
@@ -301,12 +283,13 @@ section {
 
 /* Hero section */
 .hero-section {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #557a59 100%);
+  background: linear-gradient(135deg, var(--craft-paper) 0%, var(--craft-paper-light) 100%);
   color: white;
   padding: 3rem 2rem;
   border-radius: 12px;
   text-align: center;
   margin-bottom: 3rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
 
 .hero-content h2 {
@@ -372,7 +355,7 @@ section {
 }
 
 .service-card h3 {
-  color: var(--primary-color);
+  color: var(--craft-paper-dark);
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -383,14 +366,14 @@ section {
 }
 
 .service-card a {
-  color: var(--primary-color);
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 .service-card a:hover {
-  color: var(--accent-color);
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
@@ -444,23 +427,25 @@ section {
 }
 
 .btn-primary {
-  background: var(--primary-color);
+  background: var(--accent-color);
   color: white;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
 }
 
 .btn-primary:hover {
-  background: #557a59;
+  background: var(--craft-paper);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
 }
 
 .btn-secondary {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: white;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
 }
 
 .btn-secondary:hover {
-  background: #c09564;
+  background: var(--craft-paper-dark);
   transform: translateY(-2px);
 }
 
@@ -529,7 +514,7 @@ section {
 }
 
 .therapist-title {
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -566,7 +551,7 @@ section {
 }
 
 .contact-item h4 {
-  color: var(--primary-color);
+  color: var(--accent-color);
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -601,15 +586,16 @@ section {
 .social-links a {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: var(--primary-color);
+  background: var(--accent-color);
   color: white;
   border-radius: 4px;
   text-decoration: none;
   transition: background 0.2s ease;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
 }
 
 .social-links a:hover {
-  background: #557a59;
+  background: var(--craft-paper);
 }
 
 /* Contact form */
@@ -645,7 +631,7 @@ section {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
 }
 
 .form-note {
@@ -694,7 +680,7 @@ section {
 }
 
 .faq-item h4 {
-  color: var(--primary-color);
+  color: var(--craft-paper-dark);
   margin-top: 0;
   margin-bottom: 0.75rem;
 }
@@ -732,7 +718,7 @@ section {
   font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: var(--craft-paper-dark);
 }
 
 .footer-section p {
