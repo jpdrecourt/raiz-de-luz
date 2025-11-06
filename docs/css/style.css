@@ -47,7 +47,7 @@ header {
 
 .header-content {
   position: relative;
-  padding: 0;
+  padding: 5px 0 0;
   background: radial-gradient(
     ellipse at 50% 28%,
     var(--bg-cream) 0%,
