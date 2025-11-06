@@ -19,7 +19,15 @@ docs/
 ├── js/
 │   ├── main.js        # Main JavaScript utilities
 │   └── contact-form.js # Contact form handler
-└── media/             # Images and media files
+└── media/
+    ├── raiz-de-luz-logo.png    # Main logo
+    ├── favicon.ico              # Browser favicon (32x32)
+    ├── apple-touch-icon.png     # iOS home screen icon (180x180)
+    ├── favicon-192.png          # Android icon (192x192)
+    └── favicon-512.png          # Android splash (512x512)
+
+scripts/
+└── generate-favicons.py   # Favicon generator script
 ```
 
 ## Features
@@ -75,11 +83,37 @@ The website is in the `docs/` directory. You can:
 
 ### Content
 
-- **Logo**: Replace `docs/media/raiz-de-luz-logo.svg` with your logo
+- **Logo**: Replace `docs/media/raiz-de-luz-logo.png` with your logo
 - **Header Image**: Replace `docs/media/header-image.jpg` with your image
 - **Service Images**: Add images to `docs/media/` and update references in HTML
 - **Text**: Edit the HTML files to update content
 - **Contact Info**: Update phone, email, and address in all pages
+
+### Favicons
+
+The website includes favicons for all platforms (browser, iOS, Android). To regenerate them after updating the logo:
+
+```bash
+# Prerequisites
+pip3 install Pillow
+
+# Generate all favicons from the logo
+python3 scripts/generate-favicons.py
+```
+
+**What it generates:**
+- `favicon.ico` (32×32) - Standard browser favicon
+- `apple-touch-icon.png` (180×180) - iOS home screen icon
+- `favicon-192.png` (192×192) - Android home screen icon
+- `favicon-512.png` (512×512) - Android splash screen
+
+**Design:** Circular gradient background (80% solid cream center, 20% fade to transparency at edges) with centered logo.
+
+**Customization:** Edit `scripts/generate-favicons.py` to adjust:
+- Background color (`BG_COLOR`)
+- Gradient ratio (solid vs. fade percentage)
+- Logo scale (size relative to canvas)
+- Output sizes
 
 ### Styling
 
@@ -143,7 +177,8 @@ Example integration code is provided in `contact-form.js`.
 
 ## To-Do
 
-- [ ] Add actual logo and images
+- [x] Add actual logo and images
+- [x] Create favicons for all platforms
 - [ ] Fill in therapist information
 - [ ] Add location/address details
 - [ ] Integrate contact form with email service
