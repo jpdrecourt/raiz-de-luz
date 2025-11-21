@@ -83,7 +83,7 @@
       "        </div>",
       "        <div class=\"footer-section\">",
       "          <h3>Contacto</h3>",
-      "          <p>Email: info@raizdeluz.pt</p>",
+      "          <p>Email: info@raizdeluz.eu</p>",
       "          <p>Telefone: +351 XXX XXX XXX</p>",
       "        </div>",
       "      </div>",
@@ -92,13 +92,13 @@
       "      </div>",
       "    </footer>",
       "  </body>",
-      "</html>"
-    ]
+      "</html>",
+    ],
   },
   "Date YYYYMMDD": {
     "prefix": "rdl-date",
     "description": "Insert current date in YYYYMMDD format",
-    "body": ["$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE"]
+    "body": ["$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE"],
   },
   "Service Card": {
     "prefix": "rdl-service",
@@ -110,8 +110,8 @@
       "    ${2:Breve descrição do serviço e seus benefícios.}",
       "  </p>",
       "  <a href=\"servicos.html#${3:service-anchor}\">Saiba Mais</a>",
-      "</div>"
-    ]
+      "</div>",
+    ],
   },
   "Service Detail Section": {
     "prefix": "rdl-service-detail",
@@ -137,8 +137,8 @@
       "      <p>${8:Informação sobre duração e preço}</p>",
       "    </div>",
       "  </div>",
-      "</section>"
-    ]
+      "</section>",
+    ],
   },
   "Testimonial": {
     "prefix": "rdl-testimonial",
@@ -149,8 +149,8 @@
       "    \"${1:Texto do depoimento do cliente sobre a sua experiência.}\"",
       "  </p>",
       "  <p class=\"testimonial-author\">— ${2:Nome do Cliente}</p>",
-      "</div>"
-    ]
+      "</div>",
+    ],
   },
   "Testimonials Section": {
     "prefix": "rdl-testimonials-section",
@@ -173,8 +173,8 @@
       "      <p class=\"testimonial-author\">— ${4:Nome 2}</p>",
       "    </div>",
       "  </div>",
-      "</section>"
-    ]
+      "</section>",
+    ],
   },
   "Media Container for Image": {
     "prefix": "rdl-media-img",
@@ -183,8 +183,8 @@
       "<div class=\"media-container\">",
       "  <img src=\"media/${1:image.jpg}\" alt=\"${2:Descrição da imagem}\" />",
       "  <p class=\"media-caption\">${3:Legenda (opcional)}</p>",
-      "</div>"
-    ]
+      "</div>",
+    ],
   },
   "Photo Gallery": {
     "prefix": "rdl-gallery",
@@ -203,8 +203,8 @@
       "      <img src=\"media/${6:photo3.jpg}\" alt=\"${7:Descrição 3}\" />",
       "    </div>",
       "  </div>",
-      "</div>"
-    ]
+      "</div>",
+    ],
   },
   "Call to Action Section": {
     "prefix": "rdl-cta",
@@ -216,7 +216,7 @@
       "    ${2:Texto motivacional ou descrição}",
       "  </p>",
       "  <a href=\"${3:contacto.html}\" class=\"btn-primary\">${4:Texto do Botão}</a>",
-      "</section>"
-    ]
-  }
+      "</section>",
+    ],
+  },
 }

@@ -61,6 +61,7 @@ The website is in the `docs/` directory. You can:
 
 1. Open `docs/index.html` directly in a browser, or
 2. Use a local server:
+
    ```bash
    # Using Python
    python -m http.server 8000 --directory docs
@@ -70,6 +71,7 @@ The website is in the `docs/` directory. You can:
    ```
 
 3. Run linting:
+
    ```bash
    npm run lint
    ```
@@ -102,6 +104,7 @@ python3 scripts/generate-favicons.py
 ```
 
 **What it generates:**
+
 - `favicon.ico` (32×32) - Standard browser favicon
 - `apple-touch-icon.png` (180×180) - iOS home screen icon
 - `favicon-192.png` (192×192) - Android home screen icon
@@ -110,6 +113,7 @@ python3 scripts/generate-favicons.py
 **Design:** Circular gradient background (80% solid cream center, 20% fade to transparency at edges) with centered logo.
 
 **Customization:** Edit `scripts/generate-favicons.py` to adjust:
+
 - Background color (`BG_COLOR`)
 - Gradient ratio (solid vs. fade percentage)
 - Logo scale (size relative to canvas)
@@ -135,6 +139,7 @@ Colors and styling can be customized in `docs/css/style.css`:
 The contact form currently only has client-side validation. To make it functional, you need to:
 
 1. **Option 1 - Use a Service**:
+
    - [Formspree](https://formspree.io/)
    - [FormSubmit](https://formsubmit.co/)
    - [Netlify Forms](https://www.netlify.com/products/forms/)
@@ -203,4 +208,4 @@ All rights reserved - Raiz de Luz
 
 ## Contact
 
-For questions or support, please contact: info@raizdeluz.pt
+For questions or support, please contact: info@raizdeluz.eu
