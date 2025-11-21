@@ -14,7 +14,6 @@
   --craft-paper-dark: #6b5d4f; /* Darker brown */
   --fg-color: #333;
   --text-light: #666;
-  --text-grey: #555; /* Greyscale for text on brown background */
   --bg-light: #ebf4eb; /* Very light green background */
   --bg-cream: #f9f5f0; /* Light cream for logo area */
   --border-light: #eee;
@@ -88,7 +87,7 @@ header {
   margin-bottom: 0.5rem;
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--text-grey);
+  color: var(--fg-color);
   text-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
   position: relative;
   letter-spacing: 0.05em;
@@ -97,7 +96,7 @@ header {
 #title-text h1::after {
   content: '';
   position: absolute;
-  width: 60%;
+  width: 100%;
   height: 3px;
   bottom: -8px;
   left: 50%;
@@ -112,7 +111,7 @@ header {
 }
 
 .byline {
-  color: var(--text-grey);
+  color: var(--fg-color);
   font-weight: 400;
   font-size: 1.5rem;
   font-style: italic;
