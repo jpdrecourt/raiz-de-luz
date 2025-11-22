@@ -6,22 +6,22 @@
 }
 
 :root {
-  --primary-color: #b85c38; /* Deep terracotta/rust for depth */
-  --secondary-color: #d4a574; /* Warm earth tone */
-  --accent-color: #dda15e; /* Warm golden/amber accent - represents light */
-  --craft-paper: #8b7355; /* Earthy brown - craft paper color */
-  --craft-paper-light: #a89078; /* Lighter craft paper tone */
-  --craft-paper-dark: #6b5d4f; /* Darker brown */
-  --fg-color: #333;
-  --text-light: #666;
-  --bg-light: #ebf4eb; /* Very light green background */
-  --bg-cream: #f9f5f0; /* Light cream for logo area */
-  --border-light: #eee;
+  /* Brand Colors */
+  --brand-primary: #dda15e; /* Golden amber - main interactive color */
+  --brand-brown: #6b5d4f; /* Dark brown - headings and depth */
+
+  /* Text Colors */
+  --text-primary: #333; /* Main text */
+  --text-secondary: #666; /* Secondary/muted text */
+
+  /* UI Colors */
+  --bg-subtle: #ebf4eb; /* Subtle light green background */
+  --border-color: #eee; /* Light borders */
 }
 
 a,
 a:visited {
-  color: var(--fg-color);
+  color: var(--text-primary);
 }
 
 body {
@@ -33,8 +33,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 0;
-  color: var(--fg-color);
-  background-color: var(--bg-light);
+  color: var(--text-primary);
+  background-color: var(--bg-subtle);
 }
 
 /* Header styles - centered logo design */
@@ -49,10 +49,10 @@ header {
   padding: 5px 0 0;
   background: radial-gradient(
     ellipse at 50% 28%,
-    var(--bg-cream) 0%,
-    var(--bg-cream) 7%,
-    var(--craft-paper-light) 55%,
-    var(--craft-paper) 100%
+    white 0%,
+    white 7%,
+    #a89078 55%,
+    var(--brand-brown) 100%
   );
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 }
@@ -65,7 +65,7 @@ header {
   justify-content: center;
   padding: 1.5rem 2rem 2.5rem;
   text-align: center;
-  border-bottom: 3px solid var(--accent-color);
+  border-bottom: 3px solid var(--brand-primary);
 }
 
 #logo {
@@ -87,7 +87,7 @@ header {
   margin-bottom: 0.5rem;
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--fg-color);
+  color: var(--text-primary);
   text-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
   position: relative;
   letter-spacing: 0.05em;
@@ -104,14 +104,14 @@ header {
   background: linear-gradient(
     90deg,
     transparent,
-    var(--accent-color),
+    var(--brand-primary),
     transparent
   );
   border-radius: 2px;
 }
 
 .byline {
-  color: var(--fg-color);
+  color: var(--text-primary);
   font-weight: 400;
   font-size: 1.5rem;
   font-style: italic;
@@ -177,14 +177,14 @@ li {
 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--craft-paper-dark);
+  color: var(--brand-brown);
 }
 
 h3 {
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: var(--craft-paper-dark);
+  color: var(--brand-brown);
 }
 
 h4 {
@@ -216,7 +216,7 @@ h4 {
 }
 
 .nav-link {
-  color: var(--fg-color);
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
@@ -234,7 +234,7 @@ h4 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--accent-color);
+  background: var(--brand-primary);
   transition: width 0.3s ease;
 }
 
@@ -245,7 +245,7 @@ h4 {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--accent-color);
+  color: var(--brand-primary);
 }
 
 @media (width <= 768px) {
@@ -294,8 +294,8 @@ section {
 .hero-section {
   background: linear-gradient(
     135deg,
-    var(--craft-paper) 0%,
-    var(--craft-paper-light) 100%
+    var(--brand-brown) 0%,
+    #a89078 100%
   );
   color: white;
   padding: 3rem 2rem;
@@ -321,11 +321,11 @@ section {
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .page-header p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   font-size: 1.2rem;
 }
 
@@ -402,19 +402,19 @@ section {
 }
 
 .service-card h3 {
-  color: var(--craft-paper-dark);
+  color: var(--brand-brown);
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
 .service-card p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
 
 .service-card a.card-link {
-  color: var(--accent-color);
+  color: var(--brand-primary);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
@@ -423,7 +423,7 @@ section {
 }
 
 .service-card a.card-link:hover {
-  color: var(--primary-color);
+  color: var(--brand-primary);
   text-decoration: underline;
 }
 
@@ -431,7 +431,7 @@ section {
 .service-detail {
   margin: 3rem 0;
   padding: 2rem 0;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-color);
 }
 
 .service-content {
@@ -477,31 +477,31 @@ section {
 }
 
 .btn-primary {
-  background: var(--accent-color);
+  background: var(--brand-primary);
   color: white;
   text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
 }
 
 .btn-primary:hover {
-  background: var(--craft-paper);
+  background: var(--brand-brown);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
 }
 
 .btn-secondary {
-  background: var(--primary-color);
+  background: var(--brand-primary);
   color: white;
   text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
 }
 
 .btn-secondary:hover {
-  background: var(--craft-paper-dark);
+  background: var(--brand-brown);
   transform: translateY(-2px);
 }
 
 /* Call to Action section */
 .cta-section {
-  background: var(--bg-light);
+  background: var(--bg-subtle);
   padding: 3rem 2rem;
   border-radius: 12px;
   text-align: center;
@@ -514,7 +514,7 @@ section {
 
 .cta-section p {
   font-size: 1.15rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 
@@ -539,7 +539,7 @@ section {
   content: '✦';
   position: absolute;
   left: 0;
-  color: var(--accent-color);
+  color: var(--brand-primary);
 }
 
 .therapist-profiles {
@@ -553,7 +553,7 @@ section {
   grid-template-columns: 200px 1fr;
   gap: 2rem;
   padding: 2rem;
-  background: var(--bg-light);
+  background: var(--bg-subtle);
   border-radius: 8px;
 }
 
@@ -564,7 +564,7 @@ section {
 }
 
 .therapist-title {
-  color: var(--accent-color);
+  color: var(--brand-primary);
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -591,7 +591,7 @@ section {
 
 .contact-info,
 .contact-form-section {
-  background: var(--bg-light);
+  background: var(--bg-subtle);
   padding: 2rem;
   border-radius: 8px;
 }
@@ -601,7 +601,7 @@ section {
 }
 
 .contact-item h4 {
-  color: var(--accent-color);
+  color: var(--brand-primary);
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -612,19 +612,19 @@ section {
 }
 
 .contact-item a {
-  color: var(--accent-color);
+  color: var(--brand-primary);
   text-decoration: none;
   font-weight: 500;
 }
 
 .contact-item a:hover {
   text-decoration: underline;
-  color: var(--craft-paper-dark);
+  color: var(--brand-brown);
 }
 
 .contact-note {
   font-style: italic;
-  color: var(--text-light);
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
@@ -636,7 +636,7 @@ section {
 .social-links a {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: var(--accent-color);
+  background: var(--brand-primary);
   color: white;
   border-radius: 4px;
   text-decoration: none;
@@ -645,7 +645,7 @@ section {
 }
 
 .social-links a:hover {
-  background: var(--craft-paper);
+  background: var(--brand-brown);
 }
 
 /* Contact form */
@@ -663,14 +663,14 @@ section {
 .form-group label {
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--fg-color);
+  color: var(--text-primary);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   padding: 0.75rem;
-  border: 2px solid var(--border-light);
+  border: 2px solid var(--border-color);
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
@@ -681,12 +681,12 @@ section {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: var(--brand-primary);
 }
 
 .form-note {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-top: 1rem;
 }
 
@@ -704,7 +704,7 @@ section {
 .map-container {
   width: 100%;
   height: 400px;
-  background: var(--bg-light);
+  background: var(--bg-subtle);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -712,7 +712,7 @@ section {
 }
 
 .map-placeholder {
-  color: var(--text-light);
+  color: var(--text-secondary);
   text-align: center;
   padding: 2rem;
 }
@@ -725,12 +725,12 @@ section {
 .faq-item {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: var(--bg-light);
+  background: var(--bg-subtle);
   border-radius: 8px;
 }
 
 .faq-item h4 {
-  color: var(--craft-paper-dark);
+  color: var(--brand-brown);
   margin-top: 0;
   margin-bottom: 0.75rem;
 }
@@ -755,9 +755,9 @@ section {
   left: 0;
   background: linear-gradient(
     90deg,
-    var(--accent-color),
-    var(--craft-paper-light),
-    var(--accent-color)
+    var(--brand-primary),
+    #a89078,
+    var(--brand-primary)
   );
   opacity: 0.4;
 }
@@ -773,12 +773,12 @@ section {
   font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: 1rem;
-  color: var(--craft-paper-dark);
+  color: var(--brand-brown);
 }
 
 .footer-section p {
   font-size: 0.95rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-bottom: 0.5rem;
 }
 
@@ -793,24 +793,24 @@ section {
 }
 
 .footer-links a {
-  color: var(--text-light);
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: var(--accent-color);
+  color: var(--brand-primary);
 }
 
 .footer-copyright {
   text-align: center;
   padding-top: 1rem;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-copyright p {
   font-size: 0.85rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-bottom: 0.25rem;
 }
 
