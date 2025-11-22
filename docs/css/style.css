@@ -376,20 +376,22 @@ section {
   inset: 0;
   background: radial-gradient(
     ellipse at center,
-    rgb(255 255 255 / 100%) 0%,
-    rgb(255 255 255 / 88%) 65%,
-    rgb(255 255 255 / 72%) 100%
+    rgb(255 255 255 / 75%) 0%,
+    rgb(255 255 255 / 80%) 30%,
+    rgb(255 255 255 / 88%) 60%,
+    rgb(255 255 255 / 92%) 100%
   );
   z-index: 1;
-  transition: background 0.3s ease;
+  transition: background 0.6s ease-out;
 }
 
 .service-card:hover::before {
   background: radial-gradient(
     ellipse at center,
-    rgb(255 255 255 / 94%) 0%,
-    rgb(255 255 255 / 82%) 65%,
-    rgb(255 255 255 / 66%) 100%
+    rgb(255 255 255 / 68%) 0%,
+    rgb(255 255 255 / 73%) 30%,
+    rgb(255 255 255 / 82%) 60%,
+    rgb(255 255 255 / 88%) 100%
   );
 }
 
