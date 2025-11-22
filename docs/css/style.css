@@ -366,20 +366,31 @@ section {
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  min-height: 280px;
 }
 
-/* Optional: Add a semi-transparent overlay for cards with background images */
+/* Gradient overlay with subtle glow effect - more transparent in center */
 .service-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgb(255 255 255 / 88%);
+  background: radial-gradient(
+    ellipse at center,
+    rgb(255 255 255 / 78%) 0%,
+    rgb(255 255 255 / 85%) 40%,
+    rgb(255 255 255 / 90%) 100%
+  );
   z-index: 1;
   transition: background 0.3s ease;
 }
 
 .service-card:hover::before {
-  background: rgb(255 255 255 / 75%);
+  background: radial-gradient(
+    ellipse at center,
+    rgb(255 255 255 / 72%) 0%,
+    rgb(255 255 255 / 80%) 40%,
+    rgb(255 255 255 / 86%) 100%
+  );
 }
 
 /* Ensure content appears above the overlay */
