@@ -360,6 +360,35 @@ section {
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
   transition: transform 0.2s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Optional: Add a semi-transparent overlay for cards with background images */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(255 255 255 / 92%);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.service-card:hover::before {
+  background: rgb(255 255 255 / 88%);
+}
+
+/* Ensure content appears above the overlay */
+.service-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .service-card:hover {
@@ -376,16 +405,19 @@ section {
 .service-card p {
   color: var(--text-light);
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
-.service-card a {
+.service-card a.card-link {
   color: var(--accent-color);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
+  margin-top: auto;
+  display: inline-block;
 }
 
-.service-card a:hover {
+.service-card a.card-link:hover {
   color: var(--primary-color);
   text-decoration: underline;
 }
