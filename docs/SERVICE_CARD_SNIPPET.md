@@ -32,18 +32,59 @@ This document provides the HTML pattern for creating service cards with backgrou
 
 ## Image Guidelines
 
-- Use Wikimedia Commons or properly licensed stock images
-- Recommended resolution: 640px width minimum
-- Images should be relevant to the service
-- The semi-transparent overlay ensures text remains readable even with busy backgrounds
+### Current Placeholder Images
 
-## Example with Different Services
+The service cards currently use **Unsplash** placeholder images. These are:
+- **Free to use** without attribution (Unsplash License)
+- **High quality** stock photos
+- **Temporary** - you should replace them with your own images for better brand consistency
 
-### Massage Service
+### Recommended Image Sources
+
+1. **Your own photos**: Best for authenticity and brand identity
+2. **Unsplash** (https://unsplash.com): Free high-quality images, no attribution required
+3. **Pexels** (https://pexels.com): Free stock photos and videos
+4. **Pixabay** (https://pixabay.com): Free images and videos
+5. **Wikimedia Commons** (https://commons.wikimedia.org): Free licensed media
+
+### Image Specifications
+
+- **Resolution**: Minimum 640px width recommended
+- **Format**: JPG or PNG
+- **Subject**: Should be relevant to the specific service
+- **Composition**: Avoid busy/cluttered images; the overlay helps but simpler is better
+
+### Replacing Images
+
+To replace an image, simply update the URL in the `style` attribute:
+
+```html
+<!-- Before -->
+<div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1234567890')">
+
+<!-- After -->
+<div class="service-card" style="background-image: url('path/to/your/image.jpg')">
+```
+
+## Examples
+
+### With Unsplash Image
 ```html
 <div
   class="service-card"
-  style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Massage_in_a_spa.jpg/640px-Massage_in_a_spa.jpg')"
+  style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=640&q=80')"
+>
+  <h3>Massagem terapêutica</h3>
+  <p>Alívio de dores musculares e tensões através de técnicas especializadas de massagem profunda.</p>
+  <a href="servicos.html#massagem-terapeutica" class="card-link">Saiba Mais</a>
+</div>
+```
+
+### With Local Image
+```html
+<div
+  class="service-card"
+  style="background-image: url('media/services/therapeutic-massage.jpg')"
 >
   <h3>Massagem terapêutica</h3>
   <p>Alívio de dores musculares e tensões através de técnicas especializadas de massagem profunda.</p>
