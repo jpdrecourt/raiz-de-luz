@@ -16,7 +16,6 @@
 
   /* UI Colors */
   --bg-subtle: #ebf4eb; /* Subtle light green background */
-  --border-color: #eee; /* Light borders */
 }
 
 a,
@@ -50,8 +49,6 @@ header {
   background: radial-gradient(
     ellipse at 50% 28%,
     white 0%,
-    white 7%,
-    #a89078 55%,
     var(--brand-brown) 100%
   );
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
@@ -292,11 +289,7 @@ section {
 
 /* Hero section */
 .hero-section {
-  background: linear-gradient(
-    135deg,
-    var(--brand-brown) 0%,
-    #a89078 100%
-  );
+  background: var(--brand-brown);
   color: white;
   padding: 3rem 2rem;
   border-radius: 12px;
@@ -321,7 +314,7 @@ section {
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid rgb(0 0 0 / 10%);
 }
 
 .page-header p {
@@ -431,7 +424,7 @@ section {
 .service-detail {
   margin: 3rem 0;
   padding: 2rem 0;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgb(0 0 0 / 10%);
 }
 
 .service-content {
@@ -670,7 +663,7 @@ section {
 .form-group select,
 .form-group textarea {
   padding: 0.75rem;
-  border: 2px solid var(--border-color);
+  border: 2px solid rgb(0 0 0 / 10%);
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
@@ -753,12 +746,7 @@ section {
   height: 3px;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    90deg,
-    var(--brand-primary),
-    #a89078,
-    var(--brand-primary)
-  );
+  background: var(--brand-primary);
   opacity: 0.4;
 }
 
@@ -805,7 +793,7 @@ section {
 .footer-copyright {
   text-align: center;
   padding-top: 1rem;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgb(0 0 0 / 10%);
 }
 
 .footer-copyright p {
