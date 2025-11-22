@@ -376,9 +376,9 @@ section {
   inset: 0;
   background: radial-gradient(
     ellipse at center,
-    rgb(255 255 255 / 78%) 0%,
-    rgb(255 255 255 / 85%) 40%,
-    rgb(255 255 255 / 90%) 100%
+    rgb(255 255 255 / 100%) 0%,
+    rgb(255 255 255 / 88%) 65%,
+    rgb(255 255 255 / 72%) 100%
   );
   z-index: 1;
   transition: background 0.3s ease;
@@ -387,9 +387,9 @@ section {
 .service-card:hover::before {
   background: radial-gradient(
     ellipse at center,
-    rgb(255 255 255 / 72%) 0%,
-    rgb(255 255 255 / 80%) 40%,
-    rgb(255 255 255 / 86%) 100%
+    rgb(255 255 255 / 94%) 0%,
+    rgb(255 255 255 / 82%) 65%,
+    rgb(255 255 255 / 66%) 100%
   );
 }
 
