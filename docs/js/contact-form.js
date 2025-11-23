@@ -1,74 +1,102 @@
 // Contact Form Handler for Raiz de Luz
-// This is a basic client-side validation handler
-// You'll need to integrate with a backend service or email service for actual form submission
+// Integrated with Formspree for form submission
 
 document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // Get form data
       const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value || '',
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim() || '',
         service: document.getElementById('service').value || '',
-        message: document.getElementById('message').value,
+        message: document.getElementById('message').value.trim(),
       };
 
       // Basic client-side validation
       if (!formData.name || !formData.email || !formData.message) {
-        alert('Por favor, preencha todos os campos obrigatórios.');
+        showMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
         return;
       }
 
       // Email validation
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(formData.email)) {
-        alert('Por favor, insira um endereço de email válido.');
+        showMessage('Por favor, insira um endereço de email válido.', 'error');
         return;
       }
 
-      // TODO: Replace this with actual form submission logic
-      // Options include:
-      // 1. Using a service like Formspree, FormSubmit, or Netlify Forms
-      // 2. Sending to your own backend API
-      // 3. Using mailto: (not recommended for production)
+      // Get submit button and disable it during submission
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.textContent;
+      submitButton.disabled = true;
+      submitButton.textContent = 'A enviar...';
 
-      console.log('Form data:', formData);
+      try {
+        // TODO: Replace YOUR_FORM_ID with your actual Formspree form ID
+        // Get your form ID by signing up at https://formspree.io
+        const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID';
 
-      // For now, show a success message
-      alert(
-        'Obrigado pela sua mensagem! Entraremos em contacto consigo em breve.\n\nNota: Este é um formulário de demonstração. Por favor, integre com um serviço de email para funcionalidade completa.',
-      );
+        const response = await fetch(formspreeEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
 
-      // Reset form
-      contactForm.reset();
-
-      // Example integration with Formspree (uncomment and add your endpoint):
-      /*
-      fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-      .then(response => {
         if (response.ok) {
-          alert('Obrigado pela sua mensagem! Entraremos em contacto consigo em breve.');
+          showMessage(
+            'Obrigado pela sua mensagem! Entraremos em contacto consigo em breve.',
+            'success',
+          );
           contactForm.reset();
         } else {
-          alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.');
+          throw new Error('Form submission failed');
         }
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error:', error);
-        alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.');
-      });
-      */
+        showMessage(
+          'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente ou contacte-nos directamente por email.',
+          'error',
+        );
+      } finally {
+        // Re-enable submit button
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
     });
+  }
+
+  // Helper function to show messages to the user
+  function showMessage(message, type) {
+    // Remove any existing message
+    const existingMessage = document.querySelector('.form-message');
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
+    // Create new message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message form-message-${type}`;
+    messageDiv.textContent = message;
+
+    // Insert message before the form
+    const formSection = document.querySelector('.contact-form-section');
+    formSection.insertBefore(messageDiv, contactForm);
+
+    // Auto-remove message after 5 seconds
+    setTimeout(() => {
+      messageDiv.style.transition = 'opacity 0.5s';
+      messageDiv.style.opacity = '0';
+      setTimeout(() => messageDiv.remove(), 500);
+    }, 5000);
+
+    // Scroll to message
+    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 });
