@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Compre vales personalizados para os serviços de massagem e bem-estar da Raiz de Luz. O presente perfeito."
+    />
+    <meta
+      property="og:title"
+      content="Vales Personalizados - Raiz de Luz"
+    />
+    <meta
+      property="og:description"
+      content="Ofereça bem-estar. Vales personalizados para massagem xamânica e terapias holísticas."
+    />
+    <meta property="og:url" content="https://raizdeluz.eu/vouchers.html" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="media/favicon-192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="media/favicon-512.png"
+    />
+    <link rel="apple-touch-icon" href="media/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <title>Vales Personalizados - Raiz de Luz</title>
+  </head>
+  <body class="body">
+    <header>
+      <div class="header-content">
+        <div id="title">
+          <img
+            id="logo"
+            src="media/raiz-de-luz-logo-BW.svg"
+            alt="Raiz de Luz Logo"
+          />
+          <div id="title-text">
+            <h1>Raiz de Luz</h1>
+            <div class="byline">
+              <span>Massagem Xamânica e Bem-Estar</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-image">
+          <img src="media/header-image.jpg" alt="Espaço de cura e bem-estar" />
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h2>Vales Personalizados</h2>
+          <p>O presente perfeito para alguém especial</p>
+        </div>
+      </section>
+
+      <!-- Voucher Purchase Form Section -->
+      <section class="contact-section">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2>Ofereça Bem-Estar</h2>
+            <p>
+              Os nossos vales personalizados são o presente ideal para quem
+              valoriza saúde, relaxamento e bem-estar. Cada vale é criado
+              especialmente para o destinatário.
+            </p>
+            <h3>O que está incluído:</h3>
+            <ul>
+              <li>✨ Vale personalizado em PDF com design exclusivo</li>
+              <li>💌 Mensagem personalizada do remetente</li>
+              <li>🎁 Escolha do serviço ou valor em dinheiro</li>
+              <li>📧 Entrega por email em 24-48 horas</li>
+              <li>📅 Válido por 12 meses</li>
+            </ul>
+            <h3>Como funciona:</h3>
+            <ol>
+              <li>Preencha o formulário com os detalhes do vale</li>
+              <li>Complete o pagamento seguro via Stripe</li>
+              <li>Receba o vale personalizado por email</li>
+              <li>Imprima ou reencaminhe para o destinatário</li>
+            </ol>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h2>Criar o Seu Vale</h2>
+            <form id="voucher-form" class="contact-form">
+              <!-- Voucher Amount/Type -->
+              <div class="form-group">
+                <label for="voucher-type">Tipo de Vale *</label>
+                <select id="voucher-type" name="voucher-type" required>
+                  <option value="">Selecione uma opção</option>
+                  <option value="50">Vale de €50</option>
+                  <option value="75">Vale de €75</option>
+                  <option value="100">Vale de €100</option>
+                  <option value="150">Vale de €150</option>
+                  <option value="service-therapeutic">Massagem Terapêutica (60min)</option>
+                  <option value="service-sports">Massagem Desportiva (60min)</option>
+                  <option value="service-pregnancy">Massagem para Grávidas (60min)</option>
+                  <option value="service-craniosacral">Terapia Sacro Craniana (60min)</option>
+                  <option value="service-lymphatic">Drenagem Linfática (60min)</option>
+                  <option value="service-relaxation">Relaxamento (60min)</option>
+                  <option value="service-hotstones">Pedras Quentes (90min)</option>
+                  <option value="service-shamanic">Massagem Xamânica (90min)</option>
+                </select>
+              </div>
+
+              <!-- Recipient Details -->
+              <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Detalhes do Destinatário</h3>
+
+              <div class="form-group">
+                <label for="recipient-name">Nome do Destinatário *</label>
+                <input
+                  type="text"
+                  id="recipient-name"
+                  name="recipient-name"
+                  placeholder="Para quem é o vale?"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="recipient-email">Email do Destinatário (opcional)</label>
+                <input
+                  type="email"
+                  id="recipient-email"
+                  name="recipient-email"
+                  placeholder="Se quiser que enviemos diretamente"
+                />
+              </div>
+
+              <!-- Sender Details -->
+              <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Os Seus Detalhes</h3>
+
+              <div class="form-group">
+                <label for="sender-name">O Seu Nome *</label>
+                <input
+                  type="text"
+                  id="sender-name"
+                  name="sender-name"
+                  placeholder="Como quer ser identificado?"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="sender-email">O Seu Email *</label>
+                <input
+                  type="email"
+                  id="sender-email"
+                  name="sender-email"
+                  placeholder="Para receber o vale e confirmação"
+                  required
+                />
+              </div>
+
+              <!-- Personal Message -->
+              <div class="form-group">
+                <label for="personal-message">Mensagem Pessoal (opcional)</label>
+                <textarea
+                  id="personal-message"
+                  name="personal-message"
+                  rows="4"
+                  maxlength="300"
+                  placeholder="Adicione uma mensagem especial (máx. 300 caracteres)"
+                ></textarea>
+                <small id="char-count" style="display: block; margin-top: 0.5rem; color: var(--text-light);">0/300 caracteres</small>
+              </div>
+
+              <!-- Delivery Date (Optional) -->
+              <div class="form-group">
+                <label for="delivery-date">Data de Entrega Preferida (opcional)</label>
+                <input
+                  type="date"
+                  id="delivery-date"
+                  name="delivery-date"
+                />
+                <small style="display: block; margin-top: 0.5rem; color: var(--text-light);">
+                  Enviaremos o vale nesta data (ou antes se não especificado)
+                </small>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn-primary" id="submit-btn">
+                Proceder ao Pagamento
+              </button>
+
+              <!-- Error/Success Messages -->
+              <div id="form-message" style="margin-top: 1rem;"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="intro-section">
+        <h2>Perguntas Frequentes</h2>
+
+        <h3>Quanto tempo demora a receber o vale?</h3>
+        <p>
+          Os vales são criados manualmente com design exclusivo. Normalmente
+          enviamos em 24-48 horas. Se especificar uma data de entrega,
+          respeitamos essa preferência.
+        </p>
+
+        <h3>Posso usar o vale para qualquer serviço?</h3>
+        <p>
+          Os vales monetários (€50, €75, etc.) podem ser usados para qualquer
+          serviço ou combinação de serviços. Os vales de serviço específico
+          são válidos apenas para esse tratamento.
+        </p>
+
+        <h3>Quanto tempo é válido o vale?</h3>
+        <p>
+          Todos os vales são válidos por 12 meses a partir da data de emissão.
+        </p>
+
+        <h3>Posso cancelar ou reembolsar?</h3>
+        <p>
+          Os vales não são reembolsáveis após emissão, mas podem ser
+          transferidos para outra pessoa. Contacte-nos se tiver necessidades
+          especiais.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Raiz de Luz</h3>
+          <p>Massagem Xamânica e Bem-Estar</p>
+        </div>
+        <div class="footer-section">
+          <h3>Links Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="vouchers.html">Vales</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>Email: info@raizdeluz.eu</p>
+          <p>Telefone: +351 XXX XXX XXX</p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Raiz de Luz. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/voucher-checkout.js"></script>
+  </body>
+</html>
