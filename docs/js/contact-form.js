@@ -37,9 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
       submitButton.textContent = 'A enviar...';
 
       try {
-        // TODO: Replace YOUR_FORM_ID with your actual Formspree form ID
-        // Get your form ID by signing up at https://formspree.io
-        const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID';
+        // Formspree endpoint for contact form submissions
+        const formspreeEndpoint = 'https://formspree.io/f/xdkjyvvw';
 
         const response = await fetch(formspreeEndpoint, {
           method: 'POST',
