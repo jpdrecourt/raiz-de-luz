@@ -1,0 +1,21 @@
+# Robots.txt for Raiz de Luz Website
+# Tells search engines which pages to crawl and which to skip
+
+User-agent: *
+Allow: /
+Disallow: /media/
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (optional - wait time between requests in seconds)
+# Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://raizdeluz.eu/sitemap.xml
