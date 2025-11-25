@@ -20,7 +20,7 @@ docs/
 │   ├── main.js        # Main JavaScript utilities
 │   └── contact-form.js # Contact form handler
 └── media/
-    ├── raiz-de-luz-logo.png    # Main logo
+    ├── raiz-de-luz-logo-gray.svg    # Main logo
     ├── favicon.ico              # Browser favicon (32x32)
     ├── apple-touch-icon.png     # iOS home screen icon (180x180)
     ├── favicon-192.png          # Android icon (192x192)
@@ -85,7 +85,7 @@ The website is in the `docs/` directory. You can:
 
 ### Content
 
-- **Logo**: Replace `docs/media/raiz-de-luz-logo.png` with your logo
+- **Logo**: Replace `docs/media/raiz-de-luz-logo-gray.svg` with your logo
 - **Header Image**: Replace `docs/media/header-image.jpg` with your image
 - **Service Images**: Add images to `docs/media/` and update references in HTML
 - **Text**: Edit the HTML files to update content

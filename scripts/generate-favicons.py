@@ -13,7 +13,7 @@ Usage:
 from PIL import Image, ImageDraw
 
 # Configuration
-LOGO_PATH = 'docs/media/raiz-de-luz-logo.png'
+LOGO_PATH = 'docs/media/raiz-de-luz-logo-gray.svg'
 OUTPUT_DIR = 'docs/media/'
 BG_COLOR = (249, 245, 240)  # #f9f5f0 cream color
 
