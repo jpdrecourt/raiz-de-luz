@@ -15,6 +15,103 @@
     <meta property="og:url" content="https://raizdeluz.pt/contacto.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Raiz de Luz" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "Raiz de Luz",
+        "image": "https://raizdeluz.eu/media/raiz-de-luz-logo.png",
+        "description": "Espaço de cura e transformação através de massagem xamânica, trabalho energético e práticas de bem-estar holístico",
+        "telephone": "+351912615772",
+        "email": "info@raizdeluz.eu",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua José Elias Garcia",
+          "postalCode": "2830-349",
+          "addressLocality": "Barreiro",
+          "addressCountry": "PT"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "10:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "closed"
+          }
+        ],
+        "priceRange": "€60",
+        "url": "https://raizdeluz.eu",
+        "sameAs": [
+          "https://instagram.com/raizdeluz",
+          "https://facebook.com/raizdeluz"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como posso marcar uma sessão?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pode marcar a sua sessão por telefone, WhatsApp, email ou através do formulário de contacto. Responderemos rapidamente para confirmar a sua marcação."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual é a política de cancelamento?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pedimos que nos informe com pelo menos 24 horas de antecedência caso precise cancelar ou remarcar a sua sessão."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso de trazer alguma coisa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não precisa de trazer nada. Fornecemos tudo o necessário para a sua sessão. Recomendamos apenas que venha com roupa confortável."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Aceitam pagamento por Multibanco/MB Way?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, aceitamos pagamento em dinheiro, Multibanco, MB Way e transferência bancária."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "As sessões são adequadas para todos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As nossas terapias são seguras para a maioria das pessoas. No entanto, se tiver alguma condição médica específica, por favor informe-nos previamente para adaptarmos a sessão às suas necessidades."
+            }
+          }
+        ]
+      }
+    </script>
     <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
     <link
       rel="icon"
@@ -69,6 +166,27 @@
         <p>Estamos aqui para o apoiar na sua jornada de cura</p>
       </section>
 
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Início",
+              "item": "https://raizdeluz.eu/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contacto",
+              "item": "https://raizdeluz.eu/contacto.html"
+            }
+          ]
+        }
+      </script>
+
       <div class="contact-container">
         <!-- Contact Information -->
         <section class="contact-info">
@@ -82,7 +200,11 @@
           <div class="contact-item">
             <h4>Telemóvel/WhatsApp</h4>
             <p><a href="tel:+351912615772">+351 912 615 772</a></p>
-            <p><a href="https://wa.me/351912615772">WhatsApp: +351 912 615 772</a></p>
+            <p>
+              <a href="https://wa.me/351912615772"
+                >WhatsApp: +351 912 615 772</a
+              >
+            </p>
           </div>
 
           <div class="contact-item">
@@ -98,14 +220,14 @@
           <div class="contact-item">
             <h4>Horário</h4>
             <p>
-              Segunda a Sexta: 10h00 - 19h00<br />
-              Sábado: 10h00 - 14h00<br />
-              Domingo: Encerrado
+              <strong>Atendemos por marcação prévia</strong><br />
+              Horário flexível: 10h00 - 22h00<br />
+              Segunda a Sábado (Domingo encerrado)
             </p>
             <p class="contact-note">
               <em
-                >Atendemos por marcação. Contacte-nos para agendar a sua
-                sessão.</em
+                >Horários flexíveis disponíveis conforme a sua necessidade.
+                Contacte-nos para agendar.</em
               >
             </p>
           </div>
@@ -269,10 +391,19 @@
       </div>
       <div class="footer-copyright">
         <p>&copy; 2025 Raiz de Luz. Todos os direitos reservados.</p>
+        <p class="footer-legal-links">
+          <a href="privacidade.html">Privacidade</a> •
+          <a href="termos.html">Termos</a> •
+          <a href="politica-cookies.html">Cookies</a>
+        </p>
       </div>
     </footer>
 
     <script src="js/contact-form.js"></script>
-    <script data-goatcounter="https://raizdeluz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script
+      data-goatcounter="https://raizdeluz.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
   </body>
 </html>
