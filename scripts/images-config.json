@@ -83,6 +83,11 @@
       "photographer": "Christin Hume",
       "photographer_url": "https://unsplash.com/@christinhumephoto",
       "unsplash_url": "https://unsplash.com/photos/1608571423902-eed4a5ad8108"
+    },
+    {
+      "name": "bia-bio",
+      "local_file": "bia-600x600.jpg",
+      "description": "Fabiana Ferreira"
     }
   ]
 }

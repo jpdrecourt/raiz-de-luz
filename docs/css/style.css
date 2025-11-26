@@ -599,34 +599,69 @@ section {
 
 .therapist-card {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  background: var(--bg-subtle);
-  border-radius: 8px;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  padding: 0;
+  background: transparent;
+  align-items: start;
+}
+
+.therapist-image {
+  position: relative;
 }
 
 .therapist-image img {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+}
+
+.therapist-info h4 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .therapist-title {
   color: var(--brand-primary);
   font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.therapist-info p {
   margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+@media (width <= 968px) {
+  .therapist-card {
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+  }
 }
 
 @media (width <= 768px) {
   .therapist-card {
     grid-template-columns: 1fr;
-    text-align: center;
+    gap: 2rem;
   }
 
   .therapist-image img {
-    max-width: 200px;
+    max-width: 300px;
     margin: 0 auto;
+  }
+
+  .therapist-info {
+    text-align: left;
+  }
+
+  .therapist-info h4 {
+    font-size: 1.5rem;
   }
 }
 
