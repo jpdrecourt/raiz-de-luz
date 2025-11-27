@@ -624,6 +624,21 @@ section {
   border-radius: 12px;
 }
 
+/* Responsive media (image) container */
+.media-container {
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  background: var(--bg-subtle);
+}
+
+.media-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .therapist-profiles {
   display: grid;
   gap: 2rem;
