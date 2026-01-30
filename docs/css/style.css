@@ -1100,7 +1100,7 @@ section {
 
 /* Quote Block Styling */
 .quote-block {
-  font-family: 'Spectral', serif;
+  font-family: 'Crimson Text', serif;
   font-style: italic;
   font-size: 1.4rem;
   line-height: 1.7;
@@ -1118,7 +1118,7 @@ section {
 }
 
 .quote-attribution {
-  font-family: 'Spectral', serif;
+  font-family: 'Crimson Text', serif;
   font-style: normal;
   font-weight: 600;
   margin-top: 1rem;
@@ -1128,7 +1128,7 @@ section {
 
 /* Quote within body text - inline style */
 .quote-inline {
-  font-family: 'Spectral', serif;
+  font-family: 'Crimson Text', serif;
   font-style: italic;
   font-size: 1.2rem;
   color: var(--quote-text);
@@ -1143,7 +1143,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin: 3rem 0;
+  margin: 3rem auto;
   max-width: 700px;
 }
 
