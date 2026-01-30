@@ -1100,7 +1100,7 @@ section {
 
 /* Quote Block Styling */
 .quote-block {
-  font-family: 'Lora', serif;
+  font-family: 'Spectral', serif;
   font-style: italic;
   font-size: 1.4rem;
   line-height: 1.7;
@@ -1118,9 +1118,9 @@ section {
 }
 
 .quote-attribution {
-  font-family: 'Lora', serif;
+  font-family: 'Spectral', serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 1rem;
   color: var(--brand-brown);
   font-size: 1rem;
@@ -1128,7 +1128,7 @@ section {
 
 /* Quote within body text - inline style */
 .quote-inline {
-  font-family: 'Lora', serif;
+  font-family: 'Spectral', serif;
   font-style: italic;
   font-size: 1.2rem;
   color: var(--quote-text);
@@ -1138,12 +1138,13 @@ section {
   border-left: 3px solid var(--quote-border);
 }
 
-/* Service Cards v2 - New 3-column design */
+/* Service Cards v2 - Vertical stacked design */
 .service-cards-new {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin: 3rem 0;
+  max-width: 700px;
 }
 
 .service-card-new {
@@ -1426,8 +1427,7 @@ section {
 /* Responsive adjustments for new components */
 @media (width <= 968px) {
   .service-cards-new {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    max-width: 100%;
   }
 
   .bio-content {
