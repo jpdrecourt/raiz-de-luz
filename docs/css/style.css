@@ -14,22 +14,23 @@
   --text-primary: #333; /* Main text */
   --text-secondary: #666; /* Secondary/muted text */
 
-  /* UI Colors */
-  --bg-subtle: #ebf4eb; /* Subtle light green background */
+  /* Background Colors - Seamless warm palette */
+  --bg-base: #faf8f5; /* Main page background - warm cream */
+  --bg-warm-cream: #faf8f5; /* Warm off-white for sections */
+  --bg-warm-beige: #f5f1eb; /* Slightly warmer accent */
 
-  /* Warm Background Colors (New) */
-  --bg-warm-cream: #faf8f5; /* Warm off-white for main sections */
-  --bg-warm-beige: #f5f1eb; /* Slightly warmer for alternating sections */
-
-  /* Quote Styling Colors (New) */
+  /* Quote Styling Colors */
   --quote-bg: #f9f6f2; /* Light warm background for quote boxes */
   --quote-border: #d4a574; /* Quote left border */
   --quote-text: #5a4731; /* Darker text for better contrast */
 
-  /* Service Card Colors (New) */
+  /* Service Card Colors */
   --card-warm-white: #fefdfb; /* Service card backgrounds */
 
-  /* Image Placeholder Colors (New) */
+  /* Section Divider */
+  --divider-color: rgba(221, 161, 94, 0.35); /* Soft golden divider */
+
+  /* Image Placeholder Colors */
   --placeholder-terracotta: #d4a574;
   --placeholder-ochre: #d9b382;
 }
@@ -50,7 +51,7 @@ body {
   margin: 0 auto;
   padding: 0;
   color: var(--text-primary);
-  background-color: var(--bg-subtle);
+  background-color: var(--bg-base);
 }
 
 /* Header styles - centered logo design */
@@ -301,14 +302,20 @@ h4 {
   }
 }
 
-/* Main content sections */
+/* Main content sections - Mobile-first */
 main {
   margin-top: 0;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 769px) {
+  main {
+    padding: 2rem;
+  }
 }
 
 /* Hero section */
@@ -1098,58 +1105,81 @@ section {
    NEW REDESIGN STYLES - BIA-CENTERED HOMEPAGE
    ======================================== */
 
-/* Quote Block Styling */
+/* ========================================
+   QUOTE STYLING - Unified size, Mobile-first
+   ======================================== */
+
+/* Base quote block - mobile first */
 .quote-block {
   font-family: 'Crimson Text', serif;
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   color: var(--quote-text);
   background: var(--quote-bg);
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.5rem;
   border-left: 4px solid var(--quote-border);
-  margin: 2rem 0;
+  margin: 1.25rem 0;
   border-radius: 4px;
 }
 
+/* .quote-large is now same as .quote-block for consistency */
 .quote-block.quote-large {
-  font-size: 1.6rem;
-  padding: 2rem 2.5rem;
+  /* Same as base - unified styling */
 }
 
 .quote-attribution {
   font-family: 'Crimson Text', serif;
   font-style: normal;
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   color: var(--brand-brown);
   font-size: 1rem;
 }
 
-/* Quote within body text - inline style */
+/* Quote within body text - inline style, same size as block quotes */
 .quote-inline {
   font-family: 'Crimson Text', serif;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  line-height: 1.7;
   color: var(--quote-text);
   display: block;
-  margin: 1.5rem 0;
+  margin: 1.25rem 0;
   padding-left: 1.5rem;
   border-left: 3px solid var(--quote-border);
 }
 
-/* Service Cards v2 - Vertical stacked design */
+/* Tablet and up - larger quote text */
+@media (min-width: 769px) {
+  .quote-block,
+  .quote-block.quote-large {
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .quote-inline {
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+}
+
+/* ========================================
+   SERVICE CARDS - Mobile-first
+   ======================================== */
+
 .service-cards-new {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  margin: 3rem auto;
-  max-width: 700px;
+  gap: 1.25rem;
+  margin: 1.75rem auto;
 }
 
 .service-card-new {
   background: var(--card-warm-white);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid rgba(139, 115, 85, 0.15);
   box-shadow: 0 2px 12px rgba(139, 115, 85, 0.08);
@@ -1159,13 +1189,12 @@ section {
 }
 
 .service-card-new:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.15);
-  border-color: rgba(139, 115, 85, 0.3);
+  box-shadow: 0 4px 16px rgba(139, 115, 85, 0.12);
+  border-color: rgba(139, 115, 85, 0.25);
 }
 
 .service-card-new h4 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   color: var(--brand-brown);
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1173,18 +1202,18 @@ section {
 }
 
 .service-card-new .duration {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
   font-style: italic;
 }
 
 .service-card-new .price {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--brand-brown);
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
   border-bottom: 2px solid rgba(221, 161, 94, 0.2);
 }
 
@@ -1197,7 +1226,7 @@ section {
 }
 
 .service-card-new .note {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-style: italic;
   color: var(--text-secondary);
   background: rgba(221, 161, 94, 0.05);
@@ -1206,7 +1235,42 @@ section {
   margin-top: auto;
 }
 
-/* Image Placeholders */
+/* Tablet and up */
+@media (min-width: 769px) {
+  .service-cards-new {
+    gap: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .service-card-new {
+    padding: 2rem;
+  }
+
+  .service-card-new:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(139, 115, 85, 0.15);
+  }
+
+  .service-card-new h4 {
+    font-size: 1.4rem;
+  }
+
+  .service-card-new .price {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .service-card-new .note {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   IMAGE PLACEHOLDERS - With size specifications
+   ======================================== */
+
+/* Base placeholder styling */
 .image-placeholder {
   background: linear-gradient(
     135deg,
@@ -1217,7 +1281,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  padding: 2rem;
   border: 2px dashed rgba(139, 115, 85, 0.3);
   transition: all 0.3s ease;
   color: white;
@@ -1226,7 +1290,6 @@ section {
 
 .image-placeholder:hover {
   border-color: rgba(139, 115, 85, 0.6);
-  transform: scale(1.01);
 }
 
 .placeholder-content {
@@ -1237,38 +1300,97 @@ section {
 }
 
 .placeholder-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   opacity: 0.8;
 }
 
 .placeholder-text {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
   line-height: 1.6;
   margin: 0;
 }
 
 .placeholder-text small {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   opacity: 0.9;
   font-style: italic;
   display: block;
   margin-top: 0.5rem;
 }
 
-/* Specific placeholder sizes */
-.hero-placeholder {
-  min-height: 500px;
-  max-width: 700px;
-  margin: 0 auto 2rem;
+/* Size specifications shown in placeholder */
+.placeholder-specs {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.75rem;
 }
 
+/* Hero placeholder - Mobile first
+   RECOMMENDED: 1200 x 800px (3:2 ratio) or 1200 x 675px (16:9)
+   Subject: Bia's face, hands working, or treatment space */
+.hero-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 220px;
+  max-height: 350px;
+  margin: 0 auto;
+}
+
+/* Bio portrait placeholder - Mobile first
+   RECOMMENDED: 600 x 800px (3:4 portrait ratio)
+   Subject: Bia in her space, natural light */
 .bio-placeholder {
-  min-height: 450px;
+  width: 100%;
+  max-width: 280px;
   aspect-ratio: 3 / 4;
-  max-width: 350px;
+  margin: 0 auto 1.25rem;
+}
+
+/* Additional image placeholders for atmosphere/texture */
+.atmosphere-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 250px;
+  margin: 1.25rem 0;
+}
+
+/* Tablet and up */
+@media (min-width: 769px) {
+  .image-placeholder {
+    padding: 3rem;
+  }
+
+  .placeholder-icon {
+    font-size: 3rem;
+  }
+
+  .placeholder-text {
+    font-size: 1rem;
+  }
+
+  .hero-placeholder {
+    max-width: 700px;
+    aspect-ratio: 3 / 2;
+    min-height: 300px;
+    max-height: 450px;
+    margin: 0 auto;
+  }
+
+  .bio-placeholder {
+    max-width: 350px;
+    margin: 0;
+  }
+
+  .atmosphere-placeholder {
+    max-height: 280px;
+    margin: 1.25rem 0;
+  }
 }
 
 /* Discrete Link Styling */
@@ -1311,78 +1433,165 @@ section {
   text-decoration-color: rgba(139, 115, 85, 0.8);
 }
 
-/* Homepage Section Styling */
+/* ========================================
+   HOMEPAGE SECTIONS - Mobile-First, Seamless Flow
+   ======================================== */
+
+/* Base homepage section - mobile first */
 .homepage-section {
-  padding: 3rem 0;
-  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+  position: relative;
 }
 
-.homepage-section.hero-section {
+/* Section divider - green accent stripe between sections */
+.homepage-section::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
   background: linear-gradient(
-    135deg,
-    var(--bg-warm-cream) 0%,
+    90deg,
+    transparent 10%,
+    var(--accent-green-dark) 30%,
+    var(--accent-green-dark) 70%,
+    transparent 90%
+  );
+  margin: 1.5rem 0 0;
+}
+
+/* Remove divider from last section before footer */
+.homepage-section:last-of-type::after {
+  display: none;
+}
+
+/* Hero section */
+.homepage-section.hero-section {
+  padding: 1.5rem 0 2rem;
+}
+
+.homepage-section.hero-section::after {
+  margin-top: 2rem;
+}
+
+/* Hero quote - centered, prominent styling */
+.hero-section .quote-block {
+  background: var(--quote-bg);
+  border-left: none;
+  border-top: 3px solid var(--quote-border);
+  border-bottom: 3px solid var(--quote-border);
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  margin: 1.5rem 0 0;
+  max-width: 100%;
+  border-radius: 0;
+}
+
+.hero-section .quote-attribution {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+  .hero-section .quote-block {
+    padding: 2rem 2.5rem;
+    margin: 2rem auto 0;
+    max-width: 650px;
+  }
+}
+
+/* Invitation section */
+.homepage-section.invitation-section {
+  padding: 1.5rem 0;
+}
+
+/* Sessions section */
+.homepage-section.sessions-section {
+  padding: 1.5rem 0;
+}
+
+/* Bio section */
+.homepage-section.bio-section {
+  padding: 1.5rem 0;
+}
+
+/* Other practices section */
+.homepage-section.other-practices-section {
+  padding: 1.5rem 0;
+}
+
+/* Contact CTA section - special styling for final call to action */
+.homepage-section.contact-cta-section {
+  padding: 2rem 1.5rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
     var(--bg-warm-beige) 100%
   );
-  padding: 4rem 2rem;
-  margin: 0 -2rem 2rem;
-  border-radius: 8px;
+  margin: 0 -1.5rem;
 }
 
-.homepage-section.invitation-section {
-  background: var(--bg-warm-cream);
-  padding: 3rem 2rem;
-  margin: 2rem -2rem;
-  border-radius: 8px;
+.homepage-section.contact-cta-section::after {
+  display: none;
 }
 
-.homepage-section.sessions-section {
-  background: var(--bg-warm-beige);
-  padding: 3rem 2rem;
-  margin: 2rem -2rem;
-  border-radius: 8px;
+@media (min-width: 769px) {
+  .homepage-section.contact-cta-section {
+    padding: 2.5rem 2rem 3rem;
+    margin: 0 -2rem;
+  }
 }
 
-.homepage-section.bio-section {
-  background: var(--bg-warm-cream);
-  padding: 3rem 2rem;
-  margin: 2rem -2rem;
-  border-radius: 8px;
+/* Tablet and up */
+@media (min-width: 769px) {
+  .homepage-section {
+    padding: 2rem 0;
+  }
+
+  .homepage-section::after {
+    margin: 2rem 0 0;
+  }
+
+  .homepage-section.hero-section {
+    padding: 2rem 0 2.5rem;
+  }
+
+  .homepage-section.contact-cta-section {
+    padding: 2.5rem 0 3rem;
+  }
 }
 
-.homepage-section.other-practices-section {
-  background: var(--bg-warm-beige);
-  padding: 2.5rem 2rem;
-  margin: 2rem -2rem;
-  border-radius: 8px;
-  opacity: 0.98;
-}
-
-.homepage-section.contact-cta-section {
-  background: linear-gradient(
-    135deg,
-    var(--bg-warm-beige) 0%,
-    var(--bg-warm-cream) 100%
-  );
-  padding: 3rem 2rem;
-  margin: 2rem -2rem;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* Bio section two-column layout */
+/* Bio section layout - Mobile first (single column) */
 .bio-content {
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 3rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-/* CTA Button for Contact */
+.bio-text {
+  width: 100%;
+}
+
+/* Tablet and up - two column layout */
+@media (min-width: 769px) {
+  .bio-content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+/* ========================================
+   CTA BUTTON - Mobile-first
+   ======================================== */
+
 .btn-cta {
   background: var(--brand-primary);
   color: white;
-  font-size: 1.2rem;
-  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  padding: 0.875rem 2.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(221, 161, 94, 0.3);
   border: none;
@@ -1395,118 +1604,71 @@ section {
 
 .btn-cta:hover {
   background: var(--brand-brown);
-  transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(139, 115, 85, 0.4);
 }
 
-/* Section headings */
+@media (min-width: 769px) {
+  .btn-cta {
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+  }
+
+  .btn-cta:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ========================================
+   SECTION HEADINGS - Mobile-first
+   ======================================== */
+
 .section-heading {
   font-family: 'Inter', sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--brand-brown);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .section-subheading {
   font-family: 'Inter', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 500;
   color: var(--brand-brown);
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
-/* Paragraph spacing for cosy feel */
-.homepage-section p {
-  margin-bottom: 1.2rem;
-  line-height: 1.7;
-}
-
-/* Responsive adjustments for new components */
-@media (width <= 968px) {
-  .service-cards-new {
-    max-width: 100%;
-  }
-
-  .bio-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .bio-placeholder {
-    max-width: 300px;
-    margin: 0 auto 2rem;
-  }
-
-  .quote-block {
-    font-size: 1.2rem;
-    padding: 1.25rem 1.5rem;
-  }
-
-  .quote-block.quote-large {
-    font-size: 1.4rem;
-  }
-}
-
-@media (width <= 768px) {
-  .homepage-section {
-    padding: 2rem 1.5rem;
-    margin: 1.5rem -1.5rem;
-  }
-
-  .homepage-section.hero-section {
-    padding: 3rem 1.5rem;
-  }
-
-  .hero-placeholder {
-    min-height: 300px;
-  }
-
-  .bio-placeholder {
-    min-height: 300px;
-    max-width: 100%;
-  }
-
+@media (min-width: 769px) {
   .section-heading {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .section-subheading {
-    font-size: 1.35rem;
-  }
-
-  .btn-cta {
-    font-size: 1.1rem;
-    padding: 0.875rem 2.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.75rem;
   }
 }
 
-@media (width <= 500px) {
-  .quote-block {
-    font-size: 1.1rem;
-    padding: 1rem 1.25rem;
-  }
+/* Paragraph spacing */
+.homepage-section p {
+  margin-bottom: 1.1rem;
+  line-height: 1.7;
+}
 
-  .quote-block.quote-large {
-    font-size: 1.25rem;
-    padding: 1.25rem 1.5rem;
-  }
+/* ========================================
+   RESPONSIVE - Mobile-first approach
+   ======================================== */
 
-  .hero-placeholder {
-    min-height: 250px;
-  }
+/* Base styles are mobile-first (defined above) */
 
-  .placeholder-text {
-    font-size: 0.85rem;
-  }
+/* Tablet and up - already defined inline with components */
 
-  .service-card-new h4 {
-    font-size: 1.25rem;
-  }
-
-  .service-card-new .price {
-    font-size: 1.2rem;
+/* Large screens */
+@media (min-width: 969px) {
+  .service-cards-new {
+    max-width: 700px;
   }
 }
