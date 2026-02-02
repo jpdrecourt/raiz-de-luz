@@ -28,7 +28,7 @@
   --card-warm-white: #fefdfb; /* Service card backgrounds */
 
   /* Section Divider */
-  --divider-color: rgba(221, 161, 94, 0.35); /* Soft golden divider */
+  --divider-color: rgb(221 161 94 / 35%); /* Soft golden divider */
 
   /* Image Placeholder Colors */
   --placeholder-terracotta: #d4a574;
@@ -42,7 +42,7 @@ a:visited {
 
 body {
   font-family:
-    'Inter',
+    Inter,
     system-ui,
     -apple-system,
     sans-serif;
@@ -312,7 +312,7 @@ section {
   margin-bottom: 0;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
   main {
     padding: 2rem;
   }
@@ -1151,7 +1151,7 @@ section {
 }
 
 /* Tablet and up - larger quote text */
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .quote-block,
   .quote-block.quote-large {
     font-size: 1.6rem;
@@ -1181,16 +1181,16 @@ section {
   background: var(--card-warm-white);
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid rgba(139, 115, 85, 0.15);
-  box-shadow: 0 2px 12px rgba(139, 115, 85, 0.08);
+  border: 1px solid rgb(139 115 85 / 15%);
+  box-shadow: 0 2px 12px rgb(139 115 85 / 8%);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .service-card-new:hover {
-  box-shadow: 0 4px 16px rgba(139, 115, 85, 0.12);
-  border-color: rgba(139, 115, 85, 0.25);
+  box-shadow: 0 4px 16px rgb(139 115 85 / 12%);
+  border-color: rgb(139 115 85 / 25%);
 }
 
 .service-card-new h4 {
@@ -1214,7 +1214,7 @@ section {
   font-weight: 600;
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid rgba(221, 161, 94, 0.2);
+  border-bottom: 2px solid rgb(221 161 94 / 20%);
 }
 
 .service-card-new .description {
@@ -1229,14 +1229,14 @@ section {
   font-size: 0.85rem;
   font-style: italic;
   color: var(--text-secondary);
-  background: rgba(221, 161, 94, 0.05);
+  background: rgb(221 161 94 / 5%);
   padding: 0.75rem;
   border-radius: 4px;
   margin-top: auto;
 }
 
 /* Tablet and up */
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .service-cards-new {
     gap: 1.5rem;
     margin: 2rem auto;
@@ -1248,7 +1248,7 @@ section {
 
   .service-card-new:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(139, 115, 85, 0.15);
+    box-shadow: 0 6px 20px rgb(139 115 85 / 15%);
   }
 
   .service-card-new h4 {
@@ -1282,14 +1282,14 @@ section {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  border: 2px dashed rgba(139, 115, 85, 0.3);
+  border: 2px dashed rgb(139 115 85 / 30%);
   transition: all 0.3s ease;
   color: white;
   text-align: center;
 }
 
 .image-placeholder:hover {
-  border-color: rgba(139, 115, 85, 0.6);
+  border-color: rgb(139 115 85 / 60%);
 }
 
 .placeholder-content {
@@ -1325,7 +1325,7 @@ section {
 .placeholder-specs {
   font-size: 0.7rem;
   font-weight: 600;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgb(0 0 0 / 20%);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   margin-top: 0.75rem;
@@ -1361,7 +1361,7 @@ section {
 }
 
 /* Tablet and up */
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .image-placeholder {
     padding: 3rem;
   }
@@ -1423,14 +1423,14 @@ section {
 .link-discrete-small {
   color: var(--text-secondary);
   text-decoration: underline;
-  text-decoration-color: rgba(139, 115, 85, 0.3);
+  text-decoration-color: rgb(139 115 85 / 30%);
   font-size: 0.95rem;
   transition: all 0.2s ease;
 }
 
 .link-discrete-small:hover {
   color: var(--brand-brown);
-  text-decoration-color: rgba(139, 115, 85, 0.8);
+  text-decoration-color: rgb(139 115 85 / 80%);
 }
 
 /* ========================================
@@ -1467,13 +1467,14 @@ section {
 /* Hero section */
 .homepage-section.hero-section {
   padding: 1.5rem 0 2rem;
+  text-align: center;
 }
 
 .homepage-section.hero-section::after {
   margin-top: 2rem;
 }
 
-/* Hero quote - centered, prominent styling */
+/* Hero quote - centered, above portrait */
 .hero-section .quote-block {
   background: var(--quote-bg);
   border-left: none;
@@ -1481,9 +1482,22 @@ section {
   border-bottom: 3px solid var(--quote-border);
   text-align: center;
   padding: 1.5rem 1.25rem;
-  margin: 1.5rem 0 0;
-  max-width: 100%;
+  margin: 0 auto;
   border-radius: 0;
+}
+
+/* Hero portrait - centered below quote */
+.hero-portrait {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.hero-portrait img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
 }
 
 .hero-section .quote-attribution {
@@ -1491,11 +1505,15 @@ section {
   margin-top: 1rem;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
+  .hero-portrait img {
+    max-width: 280px;
+  }
+
   .hero-section .quote-block {
     padding: 2rem 2.5rem;
-    margin: 2rem auto 0;
-    max-width: 650px;
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 
@@ -1535,7 +1553,7 @@ section {
   display: none;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .homepage-section.contact-cta-section {
     padding: 2.5rem 2rem 3rem;
     margin: 0 -2rem;
@@ -1543,7 +1561,7 @@ section {
 }
 
 /* Tablet and up */
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .homepage-section {
     padding: 2rem 0;
   }
@@ -1565,8 +1583,20 @@ section {
 .bio-content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.5rem;
   align-items: center;
+}
+
+.bio-image {
+  width: 100%;
+  max-width: 280px;
+}
+
+.bio-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
 }
 
 .bio-text {
@@ -1574,12 +1604,16 @@ section {
 }
 
 /* Tablet and up - two column layout */
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .bio-content {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 280px 1fr;
     gap: 2.5rem;
     align-items: start;
+  }
+
+  .bio-image {
+    max-width: none;
   }
 }
 
@@ -1593,7 +1627,7 @@ section {
   font-size: 1.1rem;
   padding: 0.875rem 2.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(221, 161, 94, 0.3);
+  box-shadow: 0 4px 12px rgb(221 161 94 / 30%);
   border: none;
   text-decoration: none;
   display: inline-block;
@@ -1604,10 +1638,10 @@ section {
 
 .btn-cta:hover {
   background: var(--brand-brown);
-  box-shadow: 0 6px 16px rgba(139, 115, 85, 0.4);
+  box-shadow: 0 6px 16px rgb(139 115 85 / 40%);
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .btn-cta {
     font-size: 1.2rem;
     padding: 1rem 3rem;
@@ -1623,7 +1657,7 @@ section {
    ======================================== */
 
 .section-heading {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -1632,7 +1666,7 @@ section {
 }
 
 .section-subheading {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.35rem;
   font-weight: 500;
   color: var(--brand-brown);
@@ -1640,7 +1674,7 @@ section {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .section-heading {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -1667,8 +1701,81 @@ section {
 /* Tablet and up - already defined inline with components */
 
 /* Large screens */
-@media (min-width: 969px) {
+@media (width >= 969px) {
   .service-cards-new {
     max-width: 700px;
+  }
+}
+
+/* ========================================
+   IMAGE + QUOTE LAYOUT - Mobile first (stacked)
+   HTML order = visual order
+   ======================================== */
+
+.image-quote-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.image-quote-image {
+  width: 100%;
+}
+
+.image-quote-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+}
+
+.image-quote-text {
+  width: 100%;
+}
+
+/* Quotes within layout have no extra margin */
+.image-quote-layout .quote-inline,
+.image-quote-layout .quote-block {
+  margin: 0;
+}
+
+/* Desktop - side by side, HTML order preserved */
+@media (width >= 769px) {
+  .image-quote-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .image-quote-text {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ========================================
+   SECTION IMAGE - Cropped atmospheric images
+   ======================================== */
+
+.section-image {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+}
+
+.section-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (width >= 769px) {
+  .section-image img {
+    height: 220px;
   }
 }
