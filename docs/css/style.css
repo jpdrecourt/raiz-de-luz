@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /* Reset and base styles */
 * {
   margin: 0;
@@ -999,10 +1001,10 @@ section {
   border-radius: 6px;
   margin-bottom: 1.5rem;
   font-weight: 500;
-  animation: slideIn 0.3s ease;
+  animation: slide-in 0.3s ease;
 }
 
-@keyframes slideIn {
+@keyframes slide-in {
   from {
     opacity: 0;
     transform: translateY(-10px);
@@ -1136,18 +1138,13 @@ section {
   border-radius: 4px;
 }
 
-/* .quote-large is now same as .quote-block for consistency */
-.quote-block.quote-large {
-  /* Same as base - unified styling */
-}
-
 .quote-attribution {
   font-family: 'Crimson Text', serif;
   font-style: normal;
   font-weight: 600;
   margin-top: 0.75rem;
   color: var(--brand-brown);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 /* Quote within body text - inline style, same size as block quotes */
