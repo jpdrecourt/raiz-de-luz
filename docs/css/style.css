@@ -1589,41 +1589,52 @@ section {
   }
 }
 
-/* Bio section layout - Mobile first (single column) */
-.bio-content {
+/* Image-text layout - image LEFT, text RIGHT (desktop) */
+.image-text-layout {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items: center;
+  margin: 1.5rem 0;
 }
 
-.bio-image {
+.image-text-image {
   width: 100%;
   max-width: 280px;
+  margin: 0 auto;
 }
 
-.bio-image img {
+.image-text-image img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
 }
 
-.bio-text {
+.image-text-text {
   width: 100%;
 }
 
-/* Tablet and up - two column layout */
+/* Tablet and up - side by side, text LEFT, image RIGHT */
 @media (width >= 769px) {
-  .bio-content {
+  .image-text-layout {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
     align-items: start;
+    margin: 2rem 0;
   }
 
-  .bio-image {
+  .image-text-image {
     max-width: none;
+    margin: 0;
+    order: 2;
+  }
+
+  .image-text-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 1;
   }
 }
 
