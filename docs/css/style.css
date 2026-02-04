@@ -1589,34 +1589,47 @@ section {
   }
 }
 
-/* Image-text layout - image LEFT, text RIGHT (desktop) */
-.image-text-layout {
+/* ========================================
+   MEDIA-TEXT LAYOUT - Flexible image + text
+   Usage:
+     .media-text                    Base (mobile: stacked)
+     .media-text--image-left        Desktop: image left, text right
+     .media-text--image-right       Desktop: text left, image right
+     .media-text--narrow-image      Desktop: 2fr/1fr ratio (smaller image)
+   ======================================== */
+
+/* Base - mobile first (stacked) */
+.media-text {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
 
-.image-text-image {
+.media-text__image {
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
 }
 
-.image-text-image img {
+.media-text--narrow-image .media-text__image {
+  max-width: 240px;
+}
+
+.media-text__image img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
 }
 
-.image-text-text {
+.media-text__text {
   width: 100%;
 }
 
-/* Tablet and up - side by side, text LEFT, image RIGHT */
+/* Tablet and up - side by side */
 @media (width >= 769px) {
-  .image-text-layout {
+  .media-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
@@ -1624,16 +1637,36 @@ section {
     margin: 2rem 0;
   }
 
-  .image-text-image {
-    max-width: none;
-    margin: 0;
-    order: 2;
+  .media-text--narrow-image {
+    grid-template-columns: 2fr 1fr;
   }
 
-  .image-text-text {
+  .media-text__image {
+    max-width: none;
+    margin: 0;
+  }
+
+  .media-text__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  /* Image LEFT (image first in grid) */
+  .media-text--image-left .media-text__image {
+    order: 1;
+  }
+
+  .media-text--image-left .media-text__text {
+    order: 2;
+  }
+
+  /* Image RIGHT (text first in grid) */
+  .media-text--image-right .media-text__image {
+    order: 2;
+  }
+
+  .media-text--image-right .media-text__text {
     order: 1;
   }
 }
