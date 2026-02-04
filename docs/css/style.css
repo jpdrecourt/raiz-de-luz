@@ -1117,7 +1117,7 @@ section {
 }
 
 /* ========================================
-   NEW REDESIGN STYLES - BIA-CENTERED HOMEPAGE
+   NEW REDESIGN STYLES -FABI-CENTERED HOMEPAGE
    ======================================== */
 
 /* ========================================
@@ -1343,7 +1343,7 @@ section {
 
 /* Hero placeholder - Mobile first
    RECOMMENDED: 1200 x 800px (3:2 ratio) or 1200 x 675px (16:9)
-   Subject: Bia's face, hands working, or treatment space */
+   Subject:Fabi's face, hands working, or treatment space */
 .hero-placeholder {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -1354,7 +1354,7 @@ section {
 
 /* Bio portrait placeholder - Mobile first
    RECOMMENDED: 600 x 800px (3:4 portrait ratio)
-   Subject: Bia in her space, natural light */
+   Subject:Fabi in her space, natural light */
 .bio-placeholder {
   width: 100%;
   max-width: 280px;
