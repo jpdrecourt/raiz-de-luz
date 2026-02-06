@@ -66,11 +66,12 @@ header {
   position: relative;
   padding: 5px 0 0;
   background: radial-gradient(
-    ellipse at 50% 28%,
-    white 0%,
-    var(--brand-brown) 100%
+    ellipse at 50% 35%,
+    #fefcf8 0%,
+    #f0e8dc 55%,
+    #e4d6c4 100%
   );
-  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  box-shadow: 0 4px 12px rgb(139 115 85 / 12%);
 }
 
 #title {
@@ -79,7 +80,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 2rem 2.5rem;
+  padding: 1rem 2rem 1.5rem;
   text-align: center;
   border-bottom: 3px solid var(--brand-primary);
   text-decoration: none;
@@ -93,26 +94,26 @@ a#title:hover {
 }
 
 #logo {
-  width: 280px;
-  height: 280px;
-  margin: 1rem 0;
+  width: 240px;
+  height: 240px;
+  margin: 0.5rem 0;
   transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 8px rgb(0 0 0 / 20%));
+  filter: drop-shadow(0 2px 6px rgb(139 115 85 / 20%));
 }
 
 #title-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 #title-text h1 {
   margin-bottom: 0.5rem;
-  font-size: 3.5rem;
+  font-size: 2.75rem;
   font-weight: 700;
   color: var(--text-primary);
-  text-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+  text-shadow: 1px 1px 2px rgb(139 115 85 / 10%);
   position: relative;
   letter-spacing: 0.05em;
 }
@@ -137,48 +138,48 @@ a#title:hover {
 .byline {
   color: var(--text-primary);
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-style: italic;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   opacity: 0.85;
 }
 
 /* Responsive header adjustments */
 @media (width <= 768px) {
   #title {
-    padding: 1.25rem 1.5rem 2rem;
+    padding: 0.75rem 1.5rem 1.25rem;
   }
 
   #logo {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 
   #title-text h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 
   .byline {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (width <= 500px) {
   #title {
-    padding: 1rem 1rem 1.5rem;
+    padding: 0.5rem 1rem 1rem;
   }
 
   #logo {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
   }
 
   #title-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .byline {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -217,8 +218,8 @@ h4 {
 /* Navigation menu - Mobile first */
 .main-nav {
   position: relative;
-  background: white;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+  background: #fefcf9;
+  box-shadow: 0 2px 8px rgb(139 115 85 / 8%);
   padding: 0 0.75rem;
 }
 
