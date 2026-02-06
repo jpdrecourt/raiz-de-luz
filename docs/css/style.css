@@ -623,8 +623,9 @@ section {
 /* Footer styles */
 .site-footer {
   margin-top: 4rem;
-  padding-top: 2rem;
+  padding: 2rem 1.5rem 1rem;
   position: relative;
+  background: var(--bg-warm-beige);
 }
 
 .site-footer::before {
