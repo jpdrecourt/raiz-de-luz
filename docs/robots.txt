@@ -4,8 +4,6 @@
 User-agent: *
 Allow: /
 Disallow: /media/
-Disallow: /*.css$
-Disallow: /*.js$
 
 # Specific rules for major search engines
 User-agent: Googlebot

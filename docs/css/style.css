@@ -29,6 +29,9 @@
   /* Service Card Colors */
   --card-warm-white: #fefdfb; /* Service card backgrounds */
 
+  /* Subtle Background */
+  --bg-subtle: #f5f1eb;
+
   /* Section Divider */
   --divider-color: rgb(221 161 94 / 35%); /* Soft golden divider */
 }
@@ -138,10 +141,6 @@ a#title:hover {
   font-style: italic;
   margin-top: 0.75rem;
   opacity: 0.85;
-}
-
-.header-image {
-  display: none;
 }
 
 /* Responsive header adjustments */
@@ -1031,8 +1030,8 @@ section {
   background: linear-gradient(
     90deg,
     transparent 10%,
-    var(--accent-green-dark) 30%,
-    var(--accent-green-dark) 70%,
+    var(--divider-color) 30%,
+    var(--divider-color) 70%,
     transparent 90%
   );
   margin: 1.5rem 0 0;
