@@ -244,7 +244,7 @@ h4 {
   font-weight: 500;
   font-size: 0.85rem;
   padding: 0.4rem 0.5rem;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: all 0.2s ease;
   position: relative;
   white-space: nowrap;
@@ -334,7 +334,7 @@ section {
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgb(0 0 0 / 10%);
+  border-bottom: 2px solid rgb(139 115 85 / 10%);
 }
 
 .page-header p {
@@ -346,11 +346,11 @@ section {
 .btn {
   display: inline-block;
   background: var(--brand-primary);
-  color: white;
+  color: #3d2b14;
   font-size: 1.1rem;
   font-weight: 600;
   padding: 0.875rem 2.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   text-decoration: none;
   cursor: pointer;
@@ -359,7 +359,7 @@ section {
 }
 
 .btn:hover {
-  background: var(--brand-brown);
+  background: #c9923f;
   box-shadow: 0 6px 16px rgb(139 115 85 / 40%);
 }
 
@@ -379,7 +379,7 @@ section {
 .cta-section {
   background: var(--bg-subtle);
   padding: 3rem 2rem;
-  border-radius: 12px;
+  border-radius: 10px;
   text-align: center;
   margin: 3rem 0;
 }
@@ -425,8 +425,8 @@ section {
   height: 0;
   overflow: hidden;
   margin: 2rem 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(139 115 85 / 15%);
   background: var(--bg-subtle);
 }
 
@@ -436,15 +436,15 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 /* Responsive media (image) container */
 .media-container {
   margin: 2rem 0;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  box-shadow: 0 4px 12px rgb(139 115 85 / 15%);
   background: var(--bg-subtle);
 }
 
@@ -467,7 +467,7 @@ section {
 .contact-form-section {
   background: var(--bg-subtle);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .contact-item {
@@ -511,15 +511,14 @@ section {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--brand-primary);
-  color: white;
-  border-radius: 4px;
+  color: #3d2b14;
+  border-radius: 6px;
   text-decoration: none;
   transition: background 0.2s ease;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
 }
 
 .social-links a:hover {
-  background: var(--brand-brown);
+  background: #c9923f;
 }
 
 /* Contact form */
@@ -544,8 +543,8 @@ section {
 .form-group select,
 .form-group textarea {
   padding: 0.75rem;
-  border: 2px solid rgb(0 0 0 / 10%);
-  border-radius: 4px;
+  border: 2px solid rgb(139 115 85 / 10%);
+  border-radius: 6px;
   font-family: inherit;
   font-size: 1rem;
   transition: border-color 0.2s ease;
@@ -579,7 +578,7 @@ section {
   width: 100%;
   aspect-ratio: 16 / 9;
   background: var(--bg-subtle);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -608,7 +607,7 @@ section {
   margin-bottom: 2rem;
   padding: 1.5rem;
   background: var(--bg-subtle);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .faq-item h4 {
@@ -682,7 +681,7 @@ section {
 .footer-copyright {
   text-align: center;
   padding-top: 1rem;
-  border-top: 1px solid rgb(0 0 0 / 10%);
+  border-top: 1px solid rgb(139 115 85 / 10%);
 }
 
 .footer-copyright p {
@@ -760,7 +759,7 @@ section {
   background: #f9f9f9;
   border-left: 4px solid var(--brand-brown);
   padding: 1.5rem;
-  border-radius: 4px;
+  border-radius: 6px;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -768,7 +767,7 @@ section {
 
 .credit-item:hover {
   transform: translateX(5px);
-  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 8px rgb(139 115 85 / 10%);
 }
 
 .credit-item h3 {
@@ -797,7 +796,7 @@ section {
 .unsplash-attribution {
   background: #f0f0f0;
   padding: 1.5rem;
-  border-radius: 4px;
+  border-radius: 6px;
   margin-top: 2rem;
 }
 
@@ -830,7 +829,7 @@ section {
   padding: 1.25rem 1.5rem;
   border-left: 4px solid var(--quote-border);
   margin: 1.25rem 0;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .quote-attribution {
@@ -885,7 +884,7 @@ section {
 .service-card-new {
   background: var(--card-warm-white);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid rgb(139 115 85 / 15%);
   box-shadow: 0 2px 12px rgb(139 115 85 / 8%);
   transition: all 0.3s ease;
@@ -936,7 +935,7 @@ section {
   color: var(--text-secondary);
   background: rgb(221 161 94 / 5%);
   padding: 0.75rem;
-  border-radius: 4px;
+  border-radius: 6px;
   margin-top: auto;
 }
 
@@ -1078,8 +1077,8 @@ section {
   width: 100%;
   max-width: 240px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgb(139 115 85 / 12%);
 }
 
 .hero-section .quote-attribution {
@@ -1192,8 +1191,8 @@ section {
 .media-text__image img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgb(139 115 85 / 12%);
 }
 
 .media-text__text {
@@ -1319,8 +1318,8 @@ section {
 .image-quote-image img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(139 115 85 / 10%);
 }
 
 .image-quote-text {
@@ -1356,8 +1355,8 @@ section {
 .section-image {
   margin: 1.5rem 0;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(139 115 85 / 10%);
 }
 
 .section-image img {
