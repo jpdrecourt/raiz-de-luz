@@ -454,7 +454,6 @@ section {
   display: block;
 }
 
-
 /* Contact page styles */
 .contact-container {
   display: grid;
@@ -500,6 +499,10 @@ section {
   font-style: italic;
   color: var(--text-secondary);
   font-size: 0.95rem;
+}
+
+.phone {
+  white-space: nowrap;
 }
 
 .social-links {
@@ -971,7 +974,6 @@ section {
   }
 }
 
-
 /* Discrete Link Styling */
 .link-discrete {
   color: var(--brand-brown);
@@ -1244,7 +1246,6 @@ section {
   }
 }
 
-
 /* ========================================
    SECTION HEADINGS - Mobile-first
    ======================================== */
@@ -1422,11 +1423,11 @@ section {
    ======================================== */
 
 .technique-card {
-  background: rgba(221, 161, 94, 0.08);
+  background: rgb(221 161 94 / 8%);
   padding: 1.5rem;
   border-radius: 6px;
   margin: 2rem 0;
-  border: 1px solid rgba(221, 161, 94, 0.2);
+  border: 1px solid rgb(221 161 94 / 20%);
 }
 
 .technique-card .section-subheading {
