@@ -906,7 +906,7 @@ section {
   border-color: rgb(139 115 85 / 25%);
 }
 
-.service-card-new h4 {
+.service-card-new h3 {
   font-size: 1.25rem;
   color: var(--brand-brown);
   margin-top: 0;
@@ -964,7 +964,7 @@ section {
     box-shadow: 0 6px 20px rgb(139 115 85 / 15%);
   }
 
-  .service-card-new h4 {
+  .service-card-new h3 {
     font-size: 1.4rem;
   }
 
