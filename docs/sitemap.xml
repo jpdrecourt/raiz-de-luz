@@ -24,28 +24,5 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://raizdeluz.eu/privacidade.html</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://raizdeluz.eu/termos.html</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://raizdeluz.eu/politica-cookies.html</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://raizdeluz.eu/creditos.html</loc>
-    <lastmod>2026-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+
 </urlset>
