@@ -4,6 +4,7 @@
 User-agent: *
 Allow: /
 Disallow: /media/
+Disallow: /diplomas.html
 
 # Specific rules for major search engines
 User-agent: Googlebot

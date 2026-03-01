@@ -64,14 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Utility function to validate Portuguese phone numbers
-export function validatePortuguesePhone(phone) {
+function validatePortuguesePhone(phone) {
   // Portuguese phone number format: +351 XXX XXX XXX or 9XX XXX XXX
   const phonePattern = /^(\+351|00351|351)?\s?[2-9]\d{8}$/;
   return phonePattern.test(phone.replace(/\s/g, ''));
 }
 
 // Utility function to format date in Portuguese
-export function formatDate(date) {
+function formatDate(date) {
   return new Intl.DateTimeFormat('pt-PT', {
     year: 'numeric',
     month: 'long',
