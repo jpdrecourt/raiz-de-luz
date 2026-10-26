@@ -1604,3 +1604,12 @@ section {
   border-left: none;
   padding-left: 0;
 }
+
+/* ========================================
+   QUESTIONS LIST - numbered list (cocares-perguntas.html)
+   ======================================== */
+
+.questions-list li {
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+}
