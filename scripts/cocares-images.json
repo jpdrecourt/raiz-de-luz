@@ -1,0 +1,224 @@
+{
+  "_doc": [
+    "Manifest for scripts/build-cocares-images.py. Keys starting with '_' are ignored.",
+    "src: path relative to ../Cocars/Photos. out: output basename in docs/media/images/cocares/.",
+    "crop: [x0, y0, x1, y1] fractions of width/height, or null. aspect: 'w:h' centre-crop applied after crop, or null.",
+    "width: output pixel width (carousel 600x800, inline 2:3 600x900, 1:1 600x600). fix: optional {wb, shadow (gamma), exposure (EV)}.",
+    "_crop_px records the curator's pixel crop the fraction box was computed from."
+  ],
+  "entries": [
+    {
+      "src": "orange-rust/orange-rust-finished-01.jpg",
+      "out": "hero-laranja",
+      "_crop_px": "1080x1620 at x=0, y=0 of 1080x1920 (palm tips touch the top edge; piece centre ~44% from top)",
+      "crop": [
+        0.0,
+        0.0,
+        1.0,
+        0.8438
+      ],
+      "aspect": "2:3",
+      "width": 600
+    },
+    {
+      "src": "red-black/red-black-process-06.jpg",
+      "out": "mao-tridente",
+      "_crop_px": "1080x1080 at x=0, y=480 of 1080x1920",
+      "crop": [
+        0.0,
+        0.25,
+        1.0,
+        0.8125
+      ],
+      "aspect": "1:1",
+      "width": 600
+    },
+    {
+      "src": "orange-rust/orange-rust-process-01.jpg",
+      "out": "processo-laranja",
+      "_crop_px": "1080x1620 at x=0, y=100 of 1080x1920",
+      "crop": [
+        0.0,
+        0.0521,
+        1.0,
+        0.8958
+      ],
+      "aspect": "2:3",
+      "width": 600
+    },
+    {
+      "src": "red-black/red-black-finished-01.jpg",
+      "out": "peca-vermelho-preto",
+      "_crop_px": "1080x1620 at x=0, y=0 of 1080x1920",
+      "crop": [
+        0.0,
+        0.0,
+        1.0,
+        0.8438
+      ],
+      "aspect": "2:3",
+      "width": 600
+    },
+    {
+      "src": "jute-cowrie-raffia/jute-cowrie-raffia-finished-01.jpg",
+      "out": "carrossel-01",
+      "crop": null,
+      "aspect": "3:4",
+      "width": 600
+    },
+    {
+      "src": "red-black/red-black-detail-01.jpg",
+      "out": "carrossel-02",
+      "_crop_px": "1080x1440 at x=0, y=330 of 1080x1920",
+      "crop": [
+        0.0,
+        0.1719,
+        1.0,
+        0.9219
+      ],
+      "aspect": "3:4",
+      "width": 600,
+      "fix": {
+        "wb": true
+      }
+    },
+    {
+      "src": "teal-raffia/teal-raffia-finished-01.jpg",
+      "out": "carrossel-03",
+      "_crop_px": "1000x1333 at x=40, y=40 of 1080x1920",
+      "crop": [
+        0.037,
+        0.0208,
+        0.963,
+        0.7151
+      ],
+      "aspect": "3:4",
+      "width": 600,
+      "fix": {
+        "exposure": 0.5,
+        "warm": 0.03
+      }
+    },
+    {
+      "src": "white-gold/white-gold-detail-01.jpg",
+      "out": "carrossel-04",
+      "_crop_px": "1080x1440 at x=0, y=80 of 1080x1920",
+      "crop": [
+        0.0,
+        0.0417,
+        1.0,
+        0.7917
+      ],
+      "aspect": "3:4",
+      "width": 600,
+      "fix": {
+        "wb": true,
+        "exposure": 0.4,
+        "shadow": 0.88
+      }
+    },
+    {
+      "src": "purple-raffia/purple-raffia-finished-01.jpg",
+      "out": "carrossel-05",
+      "crop": null,
+      "aspect": "3:4",
+      "width": 600
+    },
+    {
+      "src": "green-rasta-feather/green-rasta-feather-finished-01.jpg",
+      "out": "carrossel-06",
+      "_crop_px": "1080x1440 at x=0, y=120 of 1080x1920",
+      "crop": [
+        0.0,
+        0.0625,
+        1.0,
+        0.8125
+      ],
+      "aspect": "3:4",
+      "width": 600,
+      "sharpen": false
+    },
+    {
+      "src": "orange-rust/orange-rust-detail-01.jpg",
+      "out": "carrossel-07",
+      "crop": null,
+      "aspect": "3:4",
+      "width": 600
+    },
+    {
+      "src": "teal-white-cowrie/teal-white-cowrie-detail-01.jpg",
+      "out": "carrossel-08",
+      "_crop_px": "1080x1440 at x=0, y=240 of 1080x1920",
+      "crop": [
+        0.0,
+        0.125,
+        1.0,
+        0.875
+      ],
+      "aspect": "3:4",
+      "width": 600
+    },
+    {
+      "src": "green-black/green-black-finished-05.jpg",
+      "out": "carrossel-09",
+      "_crop_px": "1080x1440 at x=0, y=0 of 1080x1920",
+      "crop": [
+        0.0,
+        0.0,
+        1.0,
+        0.75
+      ],
+      "aspect": "3:4",
+      "width": 600
+    },
+    {
+      "src": "pink-navy-raffia/pink-navy-raffia-detail-01.jpg",
+      "out": "carrossel-10",
+      "_crop_px": "1080x1440 at x=0, y=480 of 1080x1920",
+      "crop": [
+        0.0,
+        0.25,
+        1.0,
+        1.0
+      ],
+      "aspect": "3:4",
+      "width": 600
+    },
+    {
+      "src": "blue-orange/blue-orange-finished-01.jpg",
+      "out": "carrossel-11",
+      "crop": null,
+      "aspect": "3:4",
+      "width": 600,
+      "fix": {
+        "warm": 0.03
+      }
+    },
+    {
+      "src": "white-feathers/white-feathers-detail-01.jpg",
+      "out": "carrossel-12",
+      "_crop_px": "627x836 at x=0, y=230 of 627x1912",
+      "crop": [
+        0.0,
+        0.1203,
+        1.0,
+        0.5575
+      ],
+      "aspect": "3:4",
+      "width": 600
+    },
+    {
+      "src": "rainbow/rainbow-finished-01.jpg",
+      "out": "carrossel-13",
+      "_crop_px": "983x1310 at x=184, y=40 of 1368x1824",
+      "crop": [
+        0.1345,
+        0.0219,
+        0.8531,
+        0.7401
+      ],
+      "aspect": "3:4",
+      "width": 600
+    }
+  ]
+}
